@@ -1,1 +1,5 @@
-# Algoritmo-y-Programacion-III-Proyecto-de-Arianna-Clemente-y-Yonaiker-Ocando
+# Algoritmo-y-Programacion-III
+# Sección A
+# IUJO
+# Arianna Clemente 28304435
+# Yonaiker Ocando 23693888
