@@ -7,13 +7,13 @@ const login = () => {
         <div class="m-auto space-y-8 md:w-8/12 lg:w-6/12 xl:w-6/12">
           <div class="rounded-3xl border border-gray-100 bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
             <div class="p-8 py-12 sm:p-16">
-              <h2 class="mb-8 text-2xl font-bold text-gray-800 dark:text-white">
-                Sign in to your account
+              <h2 class="mb-8 text-2xl font-bold text-gray-800 dark:text-white text-center">
+                Iniciar Sesión
               </h2>
               <form action="" class="space-y-8">
                 <div class="space-y-2">
                   <label for="email" class="text-gray-600 dark:text-gray-300">
-                    Email
+                    Correo Electrónico
                   </label>
                   <input
                     type="email"
@@ -27,11 +27,11 @@ const login = () => {
                 <div>
                   <div class="flex items-center justify-between">
                     <label for="pwd" class="text-gray-600 dark:text-gray-300">
-                      Password
+                      Contraseña
                     </label>
                     <button class="-mr-2 p-2" type="reset">
                       <span class="text-sm text-primary">
-                        Forgot your password ?
+                        ¿Olvido su contraseña?
                       </span>
                     </button>
                   </div>
@@ -49,27 +49,18 @@ const login = () => {
                   class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                 >
                   <span class="relative text-base font-semibold text-white dark:text-dark">
-                    Connect
+                    Entrar
                   </span>
                 </button>
 
                 <p class="border-t border-gray-100 dark:border-gray-700 pt-6 text-sm text-gray-500 dark:text-gray-400">
-                  Don't have an account ?
-                  <a href="#" class="text-primary">
-                    Sign up
+                  ¿No tiene una cuenta?
+                  <a href={"register"} class="text-primary px-2">
+                    Registrarse
                   </a>
                 </p>
               </form>
             </div>
-          </div>
-          <div class="space-x-4 text-center text-gray-500">
-            <span>&copy; tailus</span>
-            <a href="#" class="text-sm hover:text-primary">
-              Contact
-            </a>
-            <a href="#" class="text-sm hover:text-primary">
-              Privacy & Terms
-            </a>
           </div>
         </div>
       </div>
