@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
-import { IoMail } from "react-icons/io";
+import { MdMail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -38,7 +38,7 @@ const Footer = () => {
               <FaPhoneAlt />
             </a>
             <a href="mailto:hello@mail.com" aria-label="send mail">
-              <IoMail />
+              <MdMail />
             </a>
             <a href="#" title="facebook" target="blank" aria-label="facebook">
               <svg

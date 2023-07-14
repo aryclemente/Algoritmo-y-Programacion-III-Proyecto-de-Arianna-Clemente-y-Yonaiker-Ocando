@@ -13,6 +13,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <link
+        href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <script src="https://cdn.tailwindcss.com"></script>
       <body className={inter.className}>
         <NavBar />
         {children}
