@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css"
         rel="stylesheet"
         type="text/css"
-      />
+      ></link>
       <script src="https://cdn.tailwindcss.com"></script>
       <body className={inter.className}>
         <NavBar />
