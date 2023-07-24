@@ -1,3 +1,11 @@
+Instrucciones de Uso: 
+
+1. Ejecutar en consola node script _interactivo
+
+2. Agregar la ruta del archivo que sea modificar en Mayusculas. Ejemplo: c:/Users/My_User/Desktop/Archivo_que_quiero_convertir.txt
+
+3. Revisar el nuevo archivo convertido con el contenido en Mayusculas en la carpeta script_interactivo
+
 Este es un script de Node.js que utiliza los módulos fs (File System) e inquirer. 
 
 import fs from 'fs'; - Importa el módulo fs (File System) de Node.js, que proporciona una API para interactuar con el sistema de archivos.
