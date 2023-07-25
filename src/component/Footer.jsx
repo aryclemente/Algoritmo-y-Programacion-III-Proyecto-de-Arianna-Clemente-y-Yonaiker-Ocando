@@ -18,22 +18,22 @@ const Footer = () => {
           >
             <li role="listitem">
               <a href="#" className="hover:text-primary">
-                Home
+                Inicio 
               </a>
             </li>
             <li role="listitem">
               <a href="#" className="hover:text-primary">
-                Features
+                Facturación
               </a>
             </li>
             <li role="listitem">
               <a href="#" className="hover:text-primary">
-                Get started
+                Productos
               </a>
             </li>
             <li role="listitem">
               <a href="#" className="hover:text-primary">
-                About us
+                Clientes
               </a>
             </li>
           </ul>
@@ -68,7 +68,7 @@ const Footer = () => {
 
           <div className="text-center">
             <span className="text-sm tracking-wide">
-              Copyright © tailus <span id="year"></span> | All right reserved
+              Copyright © Ocando&Clemente <span id="year"></span> | All right reserved
             </span>
           </div>
         </div>

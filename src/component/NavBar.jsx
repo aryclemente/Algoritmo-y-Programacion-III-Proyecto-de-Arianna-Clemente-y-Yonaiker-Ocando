@@ -1,5 +1,6 @@
 import React from "react";
 import { FaShoppingCart } from "react-icons/fa";
+import yourSvgFile from '../assets/users.svg';
 
 const NavBar = () => {
   return (
@@ -12,14 +13,15 @@ const NavBar = () => {
         <a className="btn btn-ghost ">Inicio</a>
         <a className="btn btn-ghost">Facturación</a>
         <a className="btn btn-ghost">Productos</a>
-        <a className="btn btn-ghost">Contacto</a>
+        <a className="btn btn-ghost">Clientes</a>
       </div>
 
       <div className="flex-none">
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
-              <img src="https://www.flaticon.es/icono-gratis/usuario_1177568?term=usuario&page=1&position=2&origin=tag&related_id=1177568" />
+            <img src={yourSvgFile} alt="Your SVG" />
+
             </div>
           </label>
           <ul
