@@ -10,7 +10,7 @@ export const metadata = {
   description: "",
 };
 
-//rutas publicas
+//rutas publicass
 const publicRoutes = ["/login/", "404"];
 
 export default function RootLayout({ children }) {
