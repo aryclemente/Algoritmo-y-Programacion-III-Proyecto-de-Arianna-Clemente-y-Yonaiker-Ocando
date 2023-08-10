@@ -11,16 +11,14 @@ export const metadata = {
 };
 
 //rutas publicass
-const publicRoutes = ["/login/", "404"];
+// const publicRoutes = ["/login/", "404"];
 
 export default function RootLayout({ children }) {
   //permite leer la url de la ruta
-  const pathName = usePathname();
+  // const pathName = usePathname();
 
   //la variable isPublic se incluye la ruta que obtengamos actualmente
-  const isPublic = publicRoutes.includes(pathName);
-  console.log("pathName", pathName);
-  console.log("isPublic", isPublic);
+  // const isPublic = publicRoutes.includes(pathName);
 
   return (
     <html lang="es">
@@ -32,7 +30,8 @@ export default function RootLayout({ children }) {
       <script src="https://cdn.tailwindcss.com"></script>
 
       <body class="bg-gray-100 dark:bg-gray-900">
-        {!isPublic && <Aside />}
+        {/* {!isPublic && <Aside />} */}
+        <Aside />
         {children}
       </body>
     </html>
