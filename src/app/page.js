@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+      <div class="h-full ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
         <div class="sticky top-0 h-16 border-b bg-white dark:bg-gray-800 dark:border-gray-700 lg:py-2.5">
           <div class="flex items-center justify-between space-x-4 px-6 2xl:container">
             <h5 class="text-2xl font-medium text-gray-600 lg:block dark:text-white">

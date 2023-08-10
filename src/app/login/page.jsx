@@ -35,14 +35,6 @@ const login = () => {
                     >
                       Contraseña
                     </label>
-                    <button className="-mr-2 p-2" type="reset">
-                      <a
-                        className="text-sm text-primary"
-                        href={"forgotPassword"}
-                      >
-                        ¿Olvido su contraseña?
-                      </a>
-                    </button>
                   </div>
                   <input
                     type="password"
@@ -61,13 +53,6 @@ const login = () => {
                     Entrar
                   </span>
                 </button>
-
-                <p className="border-t border-gray-100 dark:border-gray-700 pt-6 text-sm text-gray-500 dark:text-gray-400">
-                  ¿No tiene una cuenta?
-                  <a href={"register"} className="text-primary px-2">
-                    Registrarse
-                  </a>
-                </p>
               </form>
             </div>
           </div>
