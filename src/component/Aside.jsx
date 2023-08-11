@@ -6,13 +6,13 @@ const Aside = () => {
       <div>
         <div class="-mx-6 px-6 py-4">
           <a href="#" title="home">
-            <img src="images/logo.svg" class="w-32" alt="tailus logo" />
+            <img src="" class="w-16" alt="tailus logo" />
           </a>
         </div>
 
         <div class="mt-8 text-center">
           <img
-            src="images/second_user.webp"
+            src="https://images.pexels.com/photos/7533347/pexels-photo-7533347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt=""
             class="m-auto h-10 w-10 rounded-full object-cover lg:h-28 lg:w-28"
           />
@@ -43,7 +43,7 @@ const Aside = () => {
                   class="fill-current group-hover:text-sky-300"
                 ></path>
               </svg>
-              <span class="-mr-1 font-medium">Dashboard</span>
+              <span class="-mr-1 font-medium">Inicio</span>
             </a>
           </li>
           <li>
@@ -69,7 +69,7 @@ const Aside = () => {
                 />
               </svg>
               <span class="group-hover:text-gray-700 dark:group-hover:text-gray-50">
-                Categories
+                Documentos
               </span>
             </a>
           </li>
@@ -96,7 +96,7 @@ const Aside = () => {
                 />
               </svg>
               <span class="group-hover:text-gray-700 dark:group-hover:text-gray-50">
-                Reports
+                Ciclos
               </span>
             </a>
           </li>
@@ -121,7 +121,7 @@ const Aside = () => {
                 />
               </svg>
               <span class="group-hover:text-gray-700 dark:group-hover:text-gray-50">
-                Other data
+                Indice
               </span>
             </a>
           </li>
@@ -148,7 +148,34 @@ const Aside = () => {
                 />
               </svg>
               <span class="group-hover:text-gray-700 dark:group-hover:text-white">
-                Finance
+                Libros
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  class="fill-current text-gray-300 group-hover:text-cyan-300"
+                  d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"
+                />
+                <path
+                  class="fill-current text-gray-600 group-hover:text-cyan-600 dark:group-hover:text-sky-400"
+                  fill-rule="evenodd"
+                  d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="group-hover:text-gray-700 dark:group-hover:text-white">
+                Administración
               </span>
             </a>
           </li>
