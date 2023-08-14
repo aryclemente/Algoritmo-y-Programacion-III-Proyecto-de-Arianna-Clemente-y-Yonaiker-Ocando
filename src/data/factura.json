@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "strondId": "4d157bd8-94e1-47f7-be21-4af6e8e1a657",
+    "ControlNumber": 349,
+    "FacturaNumber": 450,
+    "Company": "Macejkovic, Stark and Herzog"
+  },
+  {
+    "id": 2,
+    "strondId": "73987444-9cc7-4807-ae24-84c50ff0c996",
+    "ControlNumber": 163,
+    "FacturaNumber": 217,
+    "Company": "Christiansen-Mraz"
+  },
+  {
+    "id": 3,
+    "strondId": "102c5491-d57c-4a25-a45c-eba9387bed5b",
+    "ControlNumber": 196,
+    "FacturaNumber": 274,
+    "Company": "Kertzmann, Ondricka and Mraz"
+  },
+  {
+    "id": 4,
+    "strondId": "20ce54b0-184f-46eb-8b39-36be9f21208d",
+    "ControlNumber": 342,
+    "FacturaNumber": 102,
+    "Company": "Cassin-Stoltenberg"
+  },
+  {
+    "id": 5,
+    "strondId": "c6ac065a-ab3b-4763-a38b-0faee9dc9807",
+    "ControlNumber": 211,
+    "FacturaNumber": 134,
+    "Company": "Hackett LLC"
+  },
+  {
+    "id": 6,
+    "strondId": "8aee405f-1b19-4be0-b50e-2447f1cb0eb1",
+    "ControlNumber": 347,
+    "FacturaNumber": 347,
+    "Company": "Hammes, Rowe and Streich"
+  },
+  {
+    "id": 7,
+    "strondId": "91c14982-02a4-433a-82b1-98f55ad408dd",
+    "ControlNumber": 180,
+    "FacturaNumber": 350,
+    "Company": "Baumbach, Heathcote and Hermann"
+  },
+  {
+    "id": 8,
+    "strondId": "dd939b97-48e4-48ce-aede-86e59c7555aa",
+    "ControlNumber": 243,
+    "FacturaNumber": 148,
+    "Company": "Feeney, Auer and Walker"
+  },
+  {
+    "id": 9,
+    "strondId": "1fc7b341-8e3f-4754-a043-d7d0541d8f2c",
+    "ControlNumber": 483,
+    "FacturaNumber": 333,
+    "Company": "Anderson, Koch and Becker"
+  },
+  {
+    "id": 10,
+    "strondId": "dadebace-eea9-43b1-98ff-c1b98d52532c",
+    "ControlNumber": 459,
+    "FacturaNumber": 307,
+    "Company": "Herzog, Reinger and D'Amore"
+  },
+  {
+    "id": 11,
+    "strondId": "17e98e7f-6b65-468c-a4bc-72edf4046d29",
+    "ControlNumber": 496,
+    "FacturaNumber": 101,
+    "Company": "Hills, Bosco and Lehner"
+  },
+  {
+    "id": 12,
+    "strondId": "3edc6ee4-02a4-4836-893d-a825c6dcdb29",
+    "ControlNumber": 293,
+    "FacturaNumber": 310,
+    "Company": "Morar Group"
+  },
+  {
+    "id": 13,
+    "strondId": "9c940b6e-9bd2-434e-b2cd-639ecc2f9130",
+    "ControlNumber": 500,
+    "FacturaNumber": 467,
+    "Company": "Beier LLC"
+  },
+  {
+    "id": 14,
+    "strondId": "5f7ff300-c95d-4545-8534-9064c31c04f3",
+    "ControlNumber": 449,
+    "FacturaNumber": 370,
+    "Company": "Kassulke-Hilll"
+  },
+  {
+    "id": 15,
+    "strondId": "592483a7-0f52-4a7b-94c1-5ad7ab009b49",
+    "ControlNumber": 437,
+    "FacturaNumber": 87,
+    "Company": "Klocko LLC"
+  },
+  {
+    "id": 16,
+    "strondId": "6c9d8aeb-a03c-49c2-b2b4-482566fa8411",
+    "ControlNumber": 20,
+    "FacturaNumber": 93,
+    "Company": "Hartmann, Rohan and Romaguera"
+  },
+  {
+    "id": 17,
+    "strondId": "425efea4-76aa-4758-80de-aa2553b2f193",
+    "ControlNumber": 319,
+    "FacturaNumber": 397,
+    "Company": "Larson LLC"
+  },
+  {
+    "id": 18,
+    "strondId": "13590fa1-9168-4e90-83f3-f4f8ef566287",
+    "ControlNumber": 128,
+    "FacturaNumber": 336,
+    "Company": "Marquardt-Wiegand"
+  },
+  {
+    "id": 19,
+    "strondId": "a59cd70d-b3aa-4622-a247-d7ccca4756c9",
+    "ControlNumber": 325,
+    "FacturaNumber": 322,
+    "Company": "Ullrich-Becker"
+  },
+  {
+    "id": 20,
+    "strondId": "c5883cac-c2af-4ecf-a1e0-9d0ef4dab9f2",
+    "ControlNumber": 78,
+    "FacturaNumber": 108,
+    "Company": "Armstrong-Lynch"
+  },
+  {
+    "id": 21,
+    "strondId": "d411fe76-2d8d-4080-85e9-76a7d9563ce7",
+    "ControlNumber": 481,
+    "FacturaNumber": 205,
+    "Company": "Rippin Inc"
+  },
+  {
+    "id": 22,
+    "strondId": "44f1ad34-84dc-4a81-b1a2-50f9319d0256",
+    "ControlNumber": 146,
+    "FacturaNumber": 288,
+    "Company": "Schoen, Lehner and Davis"
+  },
+  {
+    "id": 23,
+    "strondId": "cc7e1cfa-1fb7-487c-a7bc-df34ccfce418",
+    "ControlNumber": 155,
+    "FacturaNumber": 318,
+    "Company": "Gutkowski, Beer and Schulist"
+  },
+  {
+    "id": 24,
+    "strondId": "dcdec37e-bb35-4019-b437-301828ae7f76",
+    "ControlNumber": 384,
+    "FacturaNumber": 101,
+    "Company": "Kerluke-Von"
+  },
+  {
+    "id": 25,
+    "strondId": "5f6d094e-5af9-4812-9c89-ca3796792269",
+    "ControlNumber": 183,
+    "FacturaNumber": 116,
+    "Company": "Ratke, Smith and Reynolds"
+  },
+  {
+    "id": 26,
+    "strondId": "e3718486-f6e9-4545-a24a-14e9bc15da53",
+    "ControlNumber": 113,
+    "FacturaNumber": 447,
+    "Company": "Padberg-Bogan"
+  },
+  {
+    "id": 27,
+    "strondId": "a0f0293e-c5dc-4cb8-ac0a-fe5666e6baae",
+    "ControlNumber": 133,
+    "FacturaNumber": 29,
+    "Company": "Crona Group"
+  },
+  {
+    "id": 28,
+    "strondId": "86839c12-aab3-4400-b479-f1060af92c31",
+    "ControlNumber": 447,
+    "FacturaNumber": 489,
+    "Company": "Larkin Group"
+  },
+  {
+    "id": 29,
+    "strondId": "98d6efa7-a141-4985-bd62-6921e23c4059",
+    "ControlNumber": 195,
+    "FacturaNumber": 83,
+    "Company": "Feest and Sons"
+  },
+  {
+    "id": 30,
+    "strondId": "7442b30e-a020-48b2-8760-1bb4dbf1bdab",
+    "ControlNumber": 114,
+    "FacturaNumber": 343,
+    "Company": "Tromp Group"
+  },
+  {
+    "id": 31,
+    "strondId": "cf0fd5d0-c54f-4b12-b671-63f121a606aa",
+    "ControlNumber": 364,
+    "FacturaNumber": 421,
+    "Company": "Herzog Group"
+  },
+  {
+    "id": 32,
+    "strondId": "91014447-b8a3-4716-9154-8543e60c7562",
+    "ControlNumber": 422,
+    "FacturaNumber": 348,
+    "Company": "Bogan, Little and Wisoky"
+  },
+  {
+    "id": 33,
+    "strondId": "23e3f9eb-fc02-4856-a822-968963573af7",
+    "ControlNumber": 64,
+    "FacturaNumber": 248,
+    "Company": "Brown, Denesik and Ward"
+  },
+  {
+    "id": 34,
+    "strondId": "99b7c0e5-3d3f-4995-8f40-4e290937cc12",
+    "ControlNumber": 352,
+    "FacturaNumber": 318,
+    "Company": "Morissette Group"
+  },
+  {
+    "id": 35,
+    "strondId": "855b82ae-89d5-4d47-afe7-9c2f13d6de79",
+    "ControlNumber": 369,
+    "FacturaNumber": 279,
+    "Company": "Gottlieb-Langosh"
+  },
+  {
+    "id": 36,
+    "strondId": "563c14e0-1c34-463b-bfb1-71562dfa1a44",
+    "ControlNumber": 170,
+    "FacturaNumber": 160,
+    "Company": "Erdman, Nienow and Boyer"
+  },
+  {
+    "id": 37,
+    "strondId": "91c186c4-4553-464b-8d34-68daf871b3a7",
+    "ControlNumber": 200,
+    "FacturaNumber": 179,
+    "Company": "Zemlak-Medhurst"
+  },
+  {
+    "id": 38,
+    "strondId": "07d30759-1546-4e95-a8d1-a481aa8c96a4",
+    "ControlNumber": 2,
+    "FacturaNumber": 160,
+    "Company": "Nader and Sons"
+  },
+  {
+    "id": 39,
+    "strondId": "1c960373-d10c-4a81-a986-7fd49ab840e1",
+    "ControlNumber": 109,
+    "FacturaNumber": 313,
+    "Company": "Robel-Powlowski"
+  },
+  {
+    "id": 40,
+    "strondId": "0ac845ee-19d4-465e-9bac-620caaad1232",
+    "ControlNumber": 393,
+    "FacturaNumber": 475,
+    "Company": "Hoppe and Sons"
+  },
+  {
+    "id": 41,
+    "strondId": "31dcd2f7-9df2-450e-992e-aeeca4dff1a2",
+    "ControlNumber": 267,
+    "FacturaNumber": 439,
+    "Company": "Welch-Schumm"
+  },
+  {
+    "id": 42,
+    "strondId": "3cbc1413-0580-4fde-beb7-63afb3a0bf90",
+    "ControlNumber": 16,
+    "FacturaNumber": 239,
+    "Company": "Berge Group"
+  },
+  {
+    "id": 43,
+    "strondId": "fcaf94ac-b01b-4642-bdb2-76b7b156a3b0",
+    "ControlNumber": 220,
+    "FacturaNumber": 172,
+    "Company": "Schaden-Glover"
+  },
+  {
+    "id": 44,
+    "strondId": "c15b78b9-6f51-4cf8-ad2e-0b9a712002c2",
+    "ControlNumber": 417,
+    "FacturaNumber": 6,
+    "Company": "Hand Inc"
+  },
+  {
+    "id": 45,
+    "strondId": "ddbe73d6-5d1a-4b5c-9e0b-1470500a7497",
+    "ControlNumber": 208,
+    "FacturaNumber": 317,
+    "Company": "Little-Cummerata"
+  },
+  {
+    "id": 46,
+    "strondId": "df78f6d8-7dff-4405-b66e-73fc13e7918e",
+    "ControlNumber": 33,
+    "FacturaNumber": 249,
+    "Company": "Beatty and Sons"
+  },
+  {
+    "id": 47,
+    "strondId": "0127cd36-b338-403b-ac57-d6dce85c3fab",
+    "ControlNumber": 9,
+    "FacturaNumber": 197,
+    "Company": "Mayer LLC"
+  },
+  {
+    "id": 48,
+    "strondId": "1b12a8fe-ecb0-46f1-9b76-de67f8e4dcc5",
+    "ControlNumber": 309,
+    "FacturaNumber": 431,
+    "Company": "Kohler-Cronin"
+  },
+  {
+    "id": 49,
+    "strondId": "48b5cde3-d2c4-4e29-83ae-c7e7efd99187",
+    "ControlNumber": 45,
+    "FacturaNumber": 374,
+    "Company": "Leannon Inc"
+  },
+  {
+    "id": 50,
+    "strondId": "76f3c7f6-f9e9-44f0-aaf7-eda4f9c02dda",
+    "ControlNumber": 13,
+    "FacturaNumber": 310,
+    "Company": "Armstrong-Feest"
+  }
+]

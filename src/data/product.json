@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "strondId": "fa503800-d141-4844-8684-c61fdb7420b3",
+    "name": "Foie Gras",
+    "price": 9.25,
+    "category": "Site Furnishings"
+  },
+  {
+    "id": 2,
+    "strondId": "ecad13df-cadd-4c1a-b8a0-493ba0579c98",
+    "name": "Syrup - Monin, Swiss Choclate",
+    "price": 3.46,
+    "category": "Wall Protection"
+  },
+  {
+    "id": 3,
+    "strondId": "6292a686-9e1b-4639-9db1-c9d38330fc45",
+    "name": "Olives - Morracan Dired",
+    "price": 96.11,
+    "category": "Retaining Wall and Brick Pavers"
+  },
+  {
+    "id": 4,
+    "strondId": "17aedc27-bd84-44d5-8320-6957ac9d23eb",
+    "name": "Carroway Seed",
+    "price": 85.11,
+    "category": "Plumbing & Medical Gas"
+  },
+  {
+    "id": 5,
+    "strondId": "a954b6a1-d9e0-4cef-b614-3cdb66a667de",
+    "name": "Greens Mustard",
+    "price": 36.46,
+    "category": "Waterproofing & Caulking"
+  },
+  {
+    "id": 6,
+    "strondId": "e39ce188-253f-4c4d-8e3e-3b9d806d31f7",
+    "name": "Curry Paste - Madras",
+    "price": 51.99,
+    "category": "Plumbing & Medical Gas"
+  },
+  {
+    "id": 7,
+    "strondId": "1c880a34-36b0-4c1d-8613-625ce1b1adc5",
+    "name": "Blueberries - Frozen",
+    "price": 19.71,
+    "category": "Electrical and Fire Alarm"
+  },
+  {
+    "id": 8,
+    "strondId": "c6df4f45-b5eb-460a-a6d6-3cedf3bc109e",
+    "name": "Bagel - Plain",
+    "price": 58.77,
+    "category": "Construction Clean and Final Clean"
+  },
+  {
+    "id": 9,
+    "strondId": "79ac2aca-8b93-49f5-bd16-a9d90f4259d6",
+    "name": "Red Currants",
+    "price": 56.79,
+    "category": "Construction Clean and Final Clean"
+  },
+  {
+    "id": 10,
+    "strondId": "88ebf2c4-34cd-42be-a72c-ef5649990d55",
+    "name": "Pepper - Cayenne",
+    "price": 40.8,
+    "category": "Prefabricated Aluminum Metal Canopies"
+  },
+  {
+    "id": 11,
+    "strondId": "d04dd4e2-d29a-4d45-82f1-a69f09f5d304",
+    "name": "Bamboo Shoots - Sliced",
+    "price": 44.61,
+    "category": "Electrical"
+  },
+  {
+    "id": 12,
+    "strondId": "d722b6a7-6ce8-4b8e-902d-96805547ee16",
+    "name": "Beef - Bones, Cut - Up",
+    "price": 57.42,
+    "category": "Casework"
+  },
+  {
+    "id": 13,
+    "strondId": "6eb69ba8-807e-40c8-891d-3a3dcca4b729",
+    "name": "Cheese - Mozzarella",
+    "price": 16.24,
+    "category": "Marlite Panels (FED)"
+  },
+  {
+    "id": 14,
+    "strondId": "9d8d73ea-a2aa-4e57-989d-87bb90b320f3",
+    "name": "Lamb - Sausage Casings",
+    "price": 94.24,
+    "category": "Electrical"
+  },
+  {
+    "id": 15,
+    "strondId": "b7c04b54-3a6e-48e1-9867-521d8c6efbd1",
+    "name": "Lettuce - Escarole",
+    "price": 51.18,
+    "category": "Landscaping & Irrigation"
+  },
+  {
+    "id": 16,
+    "strondId": "090ee4c5-ccc3-4b05-b997-844afc6ddb03",
+    "name": "Tea - Grapefruit Green Tea",
+    "price": 14.6,
+    "category": "Prefabricated Aluminum Metal Canopies"
+  },
+  {
+    "id": 17,
+    "strondId": "322e1290-4ab1-47dc-a5ad-891241feb4d6",
+    "name": "Cheese - Cheddar, Old White",
+    "price": 3.58,
+    "category": "Soft Flooring and Base"
+  },
+  {
+    "id": 18,
+    "strondId": "8aa67d7c-6d0b-41a1-846d-c1d683d2efa5",
+    "name": "Bread - Roll, Italian",
+    "price": 70.48,
+    "category": "Structural and Misc Steel (Fabrication)"
+  },
+  {
+    "id": 19,
+    "strondId": "43e16481-343d-45ab-8f78-493365382247",
+    "name": "Pumpkin - Seed",
+    "price": 33.41,
+    "category": "Waterproofing & Caulking"
+  },
+  {
+    "id": 20,
+    "strondId": "07aa151a-0e66-42f1-abfe-57b58900c6c2",
+    "name": "Sauce - Apple, Unsweetened",
+    "price": 19.11,
+    "category": "Casework"
+  },
+  {
+    "id": 21,
+    "strondId": "393a0640-6604-40eb-b644-f69f38514be9",
+    "name": "Creme De Menthe Green",
+    "price": 59.94,
+    "category": "Roofing (Asphalt)"
+  },
+  {
+    "id": 22,
+    "strondId": "3201f195-6065-47c2-af20-6b6ae0275f49",
+    "name": "Dc - Sakura Fu",
+    "price": 71.29,
+    "category": "Drywall & Acoustical (MOB)"
+  },
+  {
+    "id": 23,
+    "strondId": "605bfe60-0ef6-45c9-8a61-635251ed7960",
+    "name": "Garlic - Peeled",
+    "price": 77.14,
+    "category": "Drilled Shafts"
+  },
+  {
+    "id": 24,
+    "strondId": "2ac60e88-2c44-43e3-9f13-eb77935363a9",
+    "name": "Croissants Thaw And Serve",
+    "price": 79.48,
+    "category": "Plumbing & Medical Gas"
+  },
+  {
+    "id": 25,
+    "strondId": "ee0cb56c-1474-4cbf-9842-213d1844c2e8",
+    "name": "Cassis",
+    "price": 54.2,
+    "category": "Framing (Steel)"
+  },
+  {
+    "id": 26,
+    "strondId": "d61ed097-02ab-4ac9-a440-6f1cad9eecda",
+    "name": "Beef - Texas Style Burger",
+    "price": 55.45,
+    "category": "Casework"
+  },
+  {
+    "id": 27,
+    "strondId": "08a6317c-cf7c-41a3-a03f-6f9f4d8ed473",
+    "name": "Star Anise, Whole",
+    "price": 73.59,
+    "category": "Waterproofing & Caulking"
+  },
+  {
+    "id": 28,
+    "strondId": "fc67aee0-982c-438b-9d0a-c273599c0b2b",
+    "name": "Chips Potato Reg 43g",
+    "price": 54.22,
+    "category": "Electrical"
+  },
+  {
+    "id": 29,
+    "strondId": "6057e935-c30f-40b4-9f41-8659e261dde5",
+    "name": "Mudslide",
+    "price": 16.77,
+    "category": "Framing (Wood)"
+  },
+  {
+    "id": 30,
+    "strondId": "f151c581-4a04-4242-b53a-2a617e5f722e",
+    "name": "Trueblue - Blueberry Cranberry",
+    "price": 21.65,
+    "category": "Curb & Gutter"
+  },
+  {
+    "id": 31,
+    "strondId": "e0cef6ef-2fd0-401d-ba12-e648e5a0e73c",
+    "name": "Pastry - Key Limepoppy Seed Tea",
+    "price": 75.99,
+    "category": "Asphalt Paving"
+  },
+  {
+    "id": 32,
+    "strondId": "3aea6fda-4556-4f12-ab0b-69b9137bb233",
+    "name": "Wine - Ice Wine",
+    "price": 97.67,
+    "category": "Granite Surfaces"
+  },
+  {
+    "id": 33,
+    "strondId": "3e9c6b41-17f5-4245-8d50-a9dd81acd078",
+    "name": "Beef - Roasted, Cooked",
+    "price": 25.16,
+    "category": "Landscaping & Irrigation"
+  },
+  {
+    "id": 34,
+    "strondId": "2a5b5998-0490-4753-85f8-c749fc1a8c3a",
+    "name": "Rabbit - Saddles",
+    "price": 4.77,
+    "category": "Exterior Signage"
+  },
+  {
+    "id": 35,
+    "strondId": "544909d1-9f5f-4af0-a79e-4ed7e5709c6b",
+    "name": "Bread Crumbs - Japanese Style",
+    "price": 47.94,
+    "category": "Retaining Wall and Brick Pavers"
+  },
+  {
+    "id": 36,
+    "strondId": "55003851-b59b-4686-b781-938b2b2300e1",
+    "name": "Brandy - Orange, Mc Guiness",
+    "price": 86.83,
+    "category": "EIFS"
+  },
+  {
+    "id": 37,
+    "strondId": "bcd298db-fd30-4e14-aaf2-503808e9922a",
+    "name": "Mix - Cocktail Ice Cream",
+    "price": 75.73,
+    "category": "Framing (Steel)"
+  },
+  {
+    "id": 38,
+    "strondId": "434dc140-2e89-40fe-8430-0d7a448d9c5c",
+    "name": "Scallops - 10/20",
+    "price": 32.57,
+    "category": "Soft Flooring and Base"
+  },
+  {
+    "id": 39,
+    "strondId": "514d88ca-8e4e-4e9c-b770-0e0e7a2d6a6b",
+    "name": "Snapple - Mango Maddness",
+    "price": 63.74,
+    "category": "Elevator"
+  },
+  {
+    "id": 40,
+    "strondId": "aa7c242d-3af1-4e50-92e0-8230aaddd1bd",
+    "name": "Energy Drink - Redbull 355ml",
+    "price": 53.93,
+    "category": "Masonry & Precast"
+  },
+  {
+    "id": 41,
+    "strondId": "14b01b9c-b2ae-4fdd-9c01-c2d736dc0e05",
+    "name": "Jam - Marmalade, Orange",
+    "price": 84.36,
+    "category": "RF Shielding"
+  },
+  {
+    "id": 42,
+    "strondId": "83710e88-2eca-434a-b697-ec41be8457ed",
+    "name": "Wakami Seaweed",
+    "price": 9.79,
+    "category": "Waterproofing & Caulking"
+  },
+  {
+    "id": 43,
+    "strondId": "069a558e-b232-4efb-8bdc-b3dcbad9e7c7",
+    "name": "Wine - Piper Heidsieck Brut",
+    "price": 89.58,
+    "category": "Asphalt Paving"
+  },
+  {
+    "id": 44,
+    "strondId": "79ca4cbf-56d3-490e-90e0-96cff05a65dc",
+    "name": "Gherkin - Sour",
+    "price": 32.03,
+    "category": "Plumbing & Medical Gas"
+  },
+  {
+    "id": 45,
+    "strondId": "ae050ef9-a598-4cbe-bfc0-653719a14f16",
+    "name": "Petit Baguette",
+    "price": 77.96,
+    "category": "HVAC"
+  },
+  {
+    "id": 46,
+    "strondId": "588814e7-90e0-4d5c-b532-592229a3f830",
+    "name": "Bread - Sour Batard",
+    "price": 48.77,
+    "category": "Hard Tile & Stone"
+  },
+  {
+    "id": 47,
+    "strondId": "d1b2714e-1802-4bdd-8506-2ac85fd0ae84",
+    "name": "Butter Sweet",
+    "price": 85.37,
+    "category": "Exterior Signage"
+  },
+  {
+    "id": 48,
+    "strondId": "d19289bf-f9b9-44e7-9561-b3a603563e03",
+    "name": "Beans - Green",
+    "price": 29.64,
+    "category": "Fire Sprinkler System"
+  },
+  {
+    "id": 49,
+    "strondId": "f8517ce0-1dfa-40d8-891d-e605813786c5",
+    "name": "Pork - Backs - Boneless",
+    "price": 34.1,
+    "category": "EIFS"
+  },
+  {
+    "id": 50,
+    "strondId": "7d60abc2-3781-4a8d-b2d1-dfe882563f51",
+    "name": "Tomatoes - Hot House",
+    "price": 78.33,
+    "category": "Exterior Signage"
+  }
+]
