@@ -2,13 +2,12 @@ import Aside from "@/component/Aside";
 import List from "@/component/Product/List";
 import React from "react";
 
-const page = () => {
+const Product = () => {
   return (
-    <>
-      <Aside />
+    <div className="">
       <List />
-    </>
+    </div>
   );
 };
 
-export default page;
+export default Product;
