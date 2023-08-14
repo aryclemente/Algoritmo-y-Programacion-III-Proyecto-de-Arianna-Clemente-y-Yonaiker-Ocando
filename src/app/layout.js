@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Aside from "@/component/Aside";
+import MenuHorizontal from "@/component/ManuHorizontal";
+
 import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,17 +24,21 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="es">
-      <link
+      {/* <link
         href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css"
         rel="stylesheet"
         type="text/css"
       ></link>
-      <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.tailwindcss.com"></script> */}
 
-      <body class="bg-gray-100 dark:bg-gray-900">
+      <body className="bg-gray-100 dark:bg-gray-900">
         {/* {!isPublic && <Aside />} */}
         <Aside />
-        {children}
+        <div className="h-full ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+          <MenuHorizontal />
+
+          {children}
+        </div>
       </body>
     </html>
   );
