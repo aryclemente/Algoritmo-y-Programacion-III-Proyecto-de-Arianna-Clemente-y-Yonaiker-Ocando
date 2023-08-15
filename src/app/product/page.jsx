@@ -1,4 +1,4 @@
-import Aside from "@/component/Aside";
+/* use client */
 import List from "@/component/Product/List";
 import React from "react";
 
