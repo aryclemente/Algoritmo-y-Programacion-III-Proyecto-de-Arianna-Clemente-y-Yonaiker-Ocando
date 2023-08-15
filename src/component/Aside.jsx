@@ -9,14 +9,8 @@ import router from "@/router/router";
 const Aside = () => {
   const pathName = usePathname();
   return (
-    <aside className="fixed top-0 z-10 ml-[-100%] flex h-[1800px] w-full flex-col justify-between border-r bg-white px-6 pb-3 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] dark:bg-gray-800 dark:border-gray-700">
+    <aside className="fixed top-0 z-10 ml-[-100%] flex h-screen w-full flex-col justify-between border-r bg-white px-6 pb-3 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] dark:bg-gray-800 dark:border-gray-700">
       <div>
-        <div className="-mx-6 px-6 py-4">
-          <a href="#" title="home">
-            <img src="" className="w-16" alt="tailus logo" />
-          </a>
-        </div>
-
         <div className="mt-8 text-center">
           <img
             src="https://images.pexels.com/photos/7533347/pexels-photo-7533347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -51,18 +45,6 @@ const Aside = () => {
               </li>
             );
           })}
-
-          <li>
-            <Link
-              href="#"
-              className="group flex items-center space-x-4 rounded-md px-4 py-3 "
-            >
-              <FaRegFolderOpen className="text-xl" />
-              <span className="group-hover:text-gray-700 dark:group-hover:text-gray-50">
-                Documentos
-              </span>
-            </Link>
-          </li>
         </ul>
       </div>
 
