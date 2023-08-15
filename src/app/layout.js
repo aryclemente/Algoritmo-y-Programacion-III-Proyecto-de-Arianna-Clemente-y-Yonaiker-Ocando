@@ -1,3 +1,5 @@
+/* use client */
+
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Aside from "@/component/Aside";
@@ -30,8 +32,7 @@ export default function RootLayout({ children }) {
         type="text/css"
       ></link>
       <script src="https://cdn.tailwindcss.com"></script> */}
-
-      <body className="bg-gray-100 dark:bg-gray-900">
+      <body className="bg-gray-100 dark:bg-gray-900 ">
         {/* {!isPublic && <Aside />} */}
         <Aside />
         <div className="h-full ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
