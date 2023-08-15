@@ -1,8 +1,11 @@
-import React from "react";
-
+/* use client */
+// import React, { useState } from "react";
+import product from "../../data/product.json";
+/* use client */
 const List = () => {
+  // const [currencyProduct, setcurrencyProduct] = useState(second);
   return (
-    <div>
+    <div className="p-8">
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
@@ -13,15 +16,16 @@ const List = () => {
                   <input type="checkbox" className="checkbox" />
                 </label>
               </th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Categoría</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
             <tr>
+              product
               <th>
                 <label>
                   <input type="checkbox" className="checkbox" />
