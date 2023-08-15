@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { CgMenuGridO } from "react-icons/cg";
 import { FaRegFolderOpen } from "react-icons/fa";
+import router from "@/router/router";
 
 const Aside = () => {
+  const pathName = usePathname();
   return (
-    <aside className="fixed top-0 z-10 ml-[-100%] flex h-screen w-full flex-col justify-between border-r bg-white px-6 pb-3 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] dark:bg-gray-800 dark:border-gray-700">
+    <aside className="fixed top-0 z-10 ml-[-100%] flex h-[1800px] w-full flex-col justify-between border-r bg-white px-6 pb-3 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] dark:bg-gray-800 dark:border-gray-700">
       <div>
         <div className="-mx-6 px-6 py-4">
           <a href="#" title="home">
@@ -26,93 +30,38 @@ const Aside = () => {
         </div>
 
         <ul className="mt-8 space-y-2 tracking-wide">
-          <li>
-            <Link
-              href={"/"}
-              aria-label="dashboard"
-              className="relative flex items-center space-x-4 rounded-xl bg-gradient-to-r from-sky-600 to-cyan-400 px-4 py-3 text-white"
-            >
-              <div className="text-xl">
-                <CgMenuGridO />
-              </div>
-              <span className="-mr-1 font-medium">Inicio</span>
-            </Link>
-          </li>
-          <li>
-            <Link
-              href={"/product"}
-              className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
-            >
-              <CgMenuGridO className="text-xl" />
-              <span className="group-hover:text-gray-700 dark:group-hover:text-gray-50">
-                Productos
-              </span>
-            </Link>
-          </li>
+          {router.map((route) => {
+            const isActive = route.path === pathName;
+
+            return (
+              <li>
+                <Link
+                  href={route.path}
+                  aria-label="dashboard"
+                  className={
+                    "flex items-center space-x-4 rounded-xl " +
+                    (isActive
+                      ? "relative bg-gradient-to-r from-sky-600 to-cyan-400 px-4 py-3 text-white"
+                      : "group text-gray-600 dark:text-gray-300")
+                  }
+                >
+                  <div className="text-xl">{route.icon}</div>
+                  <span className="-mr-1 font-medium">{route.name}</span>
+                </Link>
+              </li>
+            );
+          })}
+
           <li>
             <Link
               href="#"
-              className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
+              className="group flex items-center space-x-4 rounded-md px-4 py-3 "
             >
               <FaRegFolderOpen className="text-xl" />
               <span className="group-hover:text-gray-700 dark:group-hover:text-gray-50">
                 Documentos
               </span>
             </Link>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  className="fill-current text-gray-300 group-hover:text-cyan-300"
-                  d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"
-                />
-                <path
-                  className="fill-current text-gray-600 group-hover:text-cyan-600 dark:group-hover:text-sky-400"
-                  fillRule="evenodd"
-                  d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="group-hover:text-gray-700 dark:group-hover:text-white">
-                Libros
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#"
-              className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  className="fill-current text-gray-300 group-hover:text-cyan-300"
-                  d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"
-                />
-                <path
-                  className="fill-current text-gray-600 group-hover:text-cyan-600 dark:group-hover:text-sky-400"
-                  fillRule="evenodd"
-                  d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
-                  clipRule="evenodd"
-                />
-              </svg>
-              <span className="group-hover:text-gray-700 dark:group-hover:text-white">
-                Administración
-              </span>
-            </a>
           </li>
         </ul>
       </div>
