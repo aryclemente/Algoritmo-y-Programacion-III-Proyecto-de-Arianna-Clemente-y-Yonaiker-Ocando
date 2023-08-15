@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "strongId": "01acea99-5d18-446f-adce-3a0518f06f3c",
+    "name": "Grupo Aeroportuario Del Pacifico, S.A. de C.V.",
+    "price": 53.66,
+    "category": "Masonry",
+    "imagen": "https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 2,
+    "strongId": "b8498127-0d51-4c48-bfe5-daa89effe651",
+    "name": "Peregrine Pharmaceuticals Inc.",
+    "price": 68.64,
+    "category": "Electrical",
+    "imagen": "https://images.pexels.com/photos/380954/pexels-photo-380954.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 3,
+    "strongId": "b099c291-bdec-4285-99ca-3ea44bf2c863",
+    "name": "Heartland Express, Inc.",
+    "price": 19.05,
+    "category": "Drywall & Acoustical (MOB)",
+    "imagen": ""
+  },
+  {
+    "id": 4,
+    "strongId": "b8be6302-56ff-4084-bc23-95a28b079185",
+    "name": "Transglobe Energy Corp",
+    "price": 31.1,
+    "category": "Framing (Wood)",
+    "imagen": "https://images.pexels.com/photos/248412/pexels-photo-248412.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 5,
+    "strongId": "7ab7ee70-58d0-4a43-b27e-54f7dc1a17ce",
+    "name": "ARMOUR Residential REIT, Inc.",
+    "price": 10.25,
+    "category": "Temp Fencing, Decorative Fencing and Gates",
+    "imagen": "https://images.pexels.com/photos/3270223/pexels-photo-3270223.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 6,
+    "strongId": "1635e067-09c0-41f7-ada5-4c37047f2a9e",
+    "name": "Univar Inc.",
+    "price": 24.92,
+    "category": "Drywall & Acoustical (MOB)",
+    "imagen": "https://images.pexels.com/photos/279480/pexels-photo-279480.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 7,
+    "strongId": "880715f8-53be-4faf-941f-b22595e69558",
+    "name": "Apollo Commercial Real Estate Finance",
+    "price": 54.73,
+    "category": "Asphalt Paving",
+    "imagen": "https://images.pexels.com/photos/3602258/pexels-photo-3602258.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 8,
+    "strongId": "c44c2796-ceed-4741-8402-a2ff836d7496",
+    "name": "Second Sight Medical Products, Inc.",
+    "price": 89.88,
+    "category": "Plumbing & Medical Gas",
+    "imagen": ""
+  },
+  {
+    "id": 9,
+    "strongId": "e95c41b8-ff67-43d1-8c7b-55e00ef6c087",
+    "name": "Stonegate Bank",
+    "price": 32.43,
+    "category": "RF Shielding",
+    "imagen": "https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 10,
+    "strongId": "71ecc7a0-6288-4e1c-a20c-11f8ed53dbc7",
+    "name": "NantKwest, Inc.",
+    "price": 84.52,
+    "category": "Landscaping & Irrigation",
+    "imagen": ""
+  },
+  {
+    "id": 11,
+    "strongId": "8d868d78-5b4a-4f15-8cca-67e1739aa46e",
+    "name": "PNC Financial Services Group, Inc. (The)",
+    "price": 31.87,
+    "category": "Roofing (Metal)",
+    "imagen": "https://images.pexels.com/photos/2638026/pexels-photo-2638026.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 12,
+    "strongId": "336a4603-04be-411b-bf19-635a8b14dd9e",
+    "name": "MediciNova, Inc.",
+    "price": 15.47,
+    "category": "Drywall & Acoustical (FED)",
+    "imagen": "https://images.pexels.com/photos/2783873/pexels-photo-2783873.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 13,
+    "strongId": "38f58149-6971-4237-9b5c-4775e360d346",
+    "name": "Barrick Gold Corporation",
+    "price": 42.83,
+    "category": "Masonry",
+    "imagen": "https://images.pexels.com/photos/4230630/pexels-photo-4230630.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 14,
+    "strongId": "497753b8-9b22-428e-a27a-6d0958fb32d9",
+    "name": "Genetic Technologies Ltd",
+    "price": 64.54,
+    "category": "Roofing (Metal)",
+    "imagen": "https://images.pexels.com/photos/4389678/pexels-photo-4389678.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 15,
+    "strongId": "2e73474c-5397-416a-869b-518c5e0e7fa2",
+    "name": "Viad Corp",
+    "price": 23.79,
+    "category": "Curb & Gutter",
+    "imagen": "https://images.pexels.com/photos/4195527/pexels-photo-4195527.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 16,
+    "strongId": "3907bb26-c58f-4b72-9572-563a58a2230c",
+    "name": "TechTarget, Inc.",
+    "price": 21.29,
+    "category": "Electrical and Fire Alarm",
+    "imagen": "https://images.pexels.com/photos/3616984/pexels-photo-3616984.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 17,
+    "strongId": "afc0b584-dc44-4149-a40f-b742a0a213e9",
+    "name": "Orrstown Financial Services Inc",
+    "price": 44.46,
+    "category": "Fire Protection",
+    "imagen": "https://images.pexels.com/photos/4465121/pexels-photo-4465121.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 18,
+    "strongId": "aaede084-f4d4-40bd-ac2e-05591912a00d",
+    "name": "Basic Energy Services, Inc.",
+    "price": 63.22,
+    "category": "Drywall & Acoustical (MOB)",
+    "imagen": "https://images.pexels.com/photos/4021868/pexels-photo-4021868.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 19,
+    "strongId": "a5002a0f-9710-4458-b34a-37505dfe57e4",
+    "name": "Check-Cap Ltd.",
+    "price": 14.91,
+    "category": "Painting & Vinyl Wall Covering",
+    "imagen": "https://images.pexels.com/photos/3373739/pexels-photo-3373739.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 20,
+    "strongId": "bd07773a-a448-46c9-9d57-33a766e5fd64",
+    "name": "Immuron Limited",
+    "price": 71.67,
+    "category": "Asphalt Paving",
+    "imagen": ""
+  },
+  {
+    "id": 21,
+    "strongId": "804abc49-1ff8-4f0c-a9eb-529bac1ec501",
+    "name": "Pieris Pharmaceuticals, Inc.",
+    "price": 25.43,
+    "category": "HVAC",
+    "imagen": ""
+  },
+  {
+    "id": 22,
+    "strongId": "575f88e0-b052-4cef-ae04-3d1adc392857",
+    "name": "Neff Corporation",
+    "price": 92.07,
+    "category": "Granite Surfaces",
+    "imagen": "https://images.pexels.com/photos/4239014/pexels-photo-4239014.jpeg?auto=compress&cs=tinysrgb&w=600"
+  },
+  {
+    "id": 23,
+    "strongId": "15638e18-95ac-439f-a9ed-1a464ecfa80c",
+    "name": "ASML Holding N.V.",
+    "price": 7.35,
+    "category": "Overhead Doors",
+    "imagen": ""
+  },
+  {
+    "id": 24,
+    "strongId": "e1327606-7ac0-4ea3-b696-a2a0029f1b94",
+    "name": "Nomura Holdings Inc ADR",
+    "price": 75.43,
+    "category": "Drywall & Acoustical (FED)",
+    "imagen": ""
+  },
+  {
+    "id": 25,
+    "strongId": "e5ed3dfd-aa6e-46a0-8b94-40262490a311",
+    "name": "StoneMor Partners L.P.",
+    "price": 77.32,
+    "category": "Electrical and Fire Alarm",
+    "imagen": ""
+  },
+  {
+    "id": 26,
+    "strongId": "2cb5eb34-0e50-4e2e-b72f-43a062acce8d",
+    "name": "Apache Corporation",
+    "price": 92.57,
+    "category": "HVAC",
+    "imagen": ""
+  },
+  {
+    "id": 27,
+    "strongId": "1c716495-1717-46c5-a4d9-e8ef1d57601e",
+    "name": "Express, Inc.",
+    "price": 42.33,
+    "category": "Ornamental Railings",
+    "imagen": ""
+  },
+  {
+    "id": 28,
+    "strongId": "3e9128cc-cf6c-4e71-b830-a47d09b02b80",
+    "name": "CoreSite Realty Corporation",
+    "price": 35.07,
+    "category": "Hard Tile & Stone",
+    "imagen": ""
+  },
+  {
+    "id": 29,
+    "strongId": "a2f82638-bd28-40a6-bd02-e408616f1576",
+    "name": "Life Storage, Inc.",
+    "price": 67.47,
+    "category": "Termite Control",
+    "imagen": ""
+  },
+  {
+    "id": 30,
+    "strongId": "66c912a3-061e-42eb-962f-44d3126de782",
+    "name": "BroadSoft, Inc.",
+    "price": 78.7,
+    "category": "Prefabricated Aluminum Metal Canopies",
+    "imagen": ""
+  },
+  {
+    "id": 31,
+    "strongId": "9520174d-8915-4385-8c76-5f4ba9368cc0",
+    "name": "Lehman ABS Corporation",
+    "price": 34.41,
+    "category": "Roofing (Asphalt)",
+    "imagen": ""
+  },
+  {
+    "id": 32,
+    "strongId": "5ae38cde-3cdf-452e-8ad6-ac657d4de75a",
+    "name": "Seaspan Corporation",
+    "price": 25.84,
+    "category": "Electrical and Fire Alarm",
+    "imagen": ""
+  },
+  {
+    "id": 33,
+    "strongId": "79708044-9096-459d-9f8b-261b0300ea72",
+    "name": "Vanguard Mortgage-Backed Securities ETF",
+    "price": 94.23,
+    "category": "Temp Fencing, Decorative Fencing and Gates",
+    "imagen": ""
+  },
+  {
+    "id": 34,
+    "strongId": "e4e50a05-2d7d-4f7d-8605-8c0b2fe3fe4c",
+    "name": "ConocoPhillips",
+    "price": 26.62,
+    "category": "Overhead Doors",
+    "imagen": ""
+  },
+  {
+    "id": 35,
+    "strongId": "1eec1e4b-b2d3-4414-96f0-da68aaf03ab5",
+    "name": "AdvisorShares Market Adaptive Unconstrained Income ETF",
+    "price": 50.51,
+    "category": "Drywall & Acoustical (MOB)",
+    "imagen": ""
+  },
+  {
+    "id": 36,
+    "strongId": "c45e4cad-9679-4c49-8bb9-00d9f82d681f",
+    "name": "Range Resources Corporation",
+    "price": 8.03,
+    "category": "Prefabricated Aluminum Metal Canopies",
+    "imagen": ""
+  },
+  {
+    "id": 37,
+    "strongId": "675fb8c6-4557-4334-ac1e-b77e006bfd70",
+    "name": "Emerson Electric Company",
+    "price": 86.99,
+    "category": "Electrical",
+    "imagen": ""
+  },
+  {
+    "id": 38,
+    "strongId": "d767d224-4227-4bf3-ba5c-8f74c639fb98",
+    "name": "Agios Pharmaceuticals, Inc.",
+    "price": 83.86,
+    "category": "Landscaping & Irrigation",
+    "imagen": ""
+  },
+  {
+    "id": 39,
+    "strongId": "9892a906-688e-457b-b1ca-49aecb8b2f61",
+    "name": "China Petroleum & Chemical Corporation",
+    "price": 8.54,
+    "category": "Marlite Panels (FED)",
+    "imagen": ""
+  },
+  {
+    "id": 40,
+    "strongId": "2d0c050b-c379-48c4-a810-ae2052cf7dda",
+    "name": "Ambarella, Inc.",
+    "price": 44.35,
+    "category": "Roofing (Asphalt)",
+    "imagen": ""
+  },
+  {
+    "id": 41,
+    "strongId": "770a00bb-d141-4a6d-a3b7-1b7391fe39fb",
+    "name": "Silicom Ltd",
+    "price": 33.16,
+    "category": "Framing (Wood)",
+    "imagen": ""
+  },
+  {
+    "id": 42,
+    "strongId": "f3dedf96-a186-46bd-aada-691f74e359de",
+    "name": "Flaherty & Crumrine Preferred Income Fund Incorporated",
+    "price": 92.75,
+    "category": "Marlite Panels (FED)",
+    "imagen": ""
+  },
+  {
+    "id": 43,
+    "strongId": "fd56fd65-2a98-4355-a358-12e96aba850f",
+    "name": "Educational Development Corporation",
+    "price": 16.92,
+    "category": "Framing (Steel)",
+    "imagen": ""
+  },
+  {
+    "id": 44,
+    "strongId": "4bf7b3bb-e185-4732-9e12-29ff4126abe8",
+    "name": "PPlus Trust",
+    "price": 92.88,
+    "category": "Plumbing & Medical Gas",
+    "imagen": ""
+  },
+  {
+    "id": 45,
+    "strongId": "0841c75b-7ad7-45ad-a3fd-225e3bbb3140",
+    "name": "VictoryShares US 500 Volatility Wtd ETF",
+    "price": 87.45,
+    "category": "Construction Clean and Final Clean",
+    "imagen": ""
+  },
+  {
+    "id": 46,
+    "strongId": "12122de9-2010-436a-99ee-4b072b2090c1",
+    "name": "Maiden Holdings, Ltd.",
+    "price": 98.8,
+    "category": "Waterproofing & Caulking",
+    "imagen": ""
+  },
+  {
+    "id": 47,
+    "strongId": "cd2026cf-a184-446c-a683-3492b0b0a5d2",
+    "name": "Gigamon Inc.",
+    "price": 50.68,
+    "category": "EIFS",
+    "imagen": ""
+  },
+  {
+    "id": 48,
+    "strongId": "9606f6d4-ea7c-4ff3-a7c2-06fb1fa7cb30",
+    "name": "Meta Financial Group, Inc.",
+    "price": 72.69,
+    "category": "Waterproofing & Caulking",
+    "imagen": ""
+  },
+  {
+    "id": 49,
+    "strongId": "27c0349f-2066-492d-b202-daa52789750d",
+    "name": "PNM Resources, Inc. (Holding Co.)",
+    "price": 94.46,
+    "category": "Sitework & Site Utilities",
+    "imagen": ""
+  },
+  {
+    "id": 50,
+    "strongId": "607bdac6-831c-4d75-873f-7e96f5066d12",
+    "name": "Energy Transfer Equity, L.P.",
+    "price": 82.79,
+    "category": "Framing (Wood)",
+    "imagen": ""
+  }
+]
