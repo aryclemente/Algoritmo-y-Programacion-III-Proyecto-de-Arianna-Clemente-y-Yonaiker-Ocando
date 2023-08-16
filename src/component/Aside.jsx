@@ -59,7 +59,7 @@ const Aside = () => {
             >
               <FaRegFolderOpen className="text-xl" />
               <span className="group-hover:text-gray-700 dark:group-hover:text-gray-50">
-                Documentos
+                Documento
               </span>
             </Link>
           </li>

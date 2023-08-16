@@ -20,8 +20,8 @@ export default [
     path: "/invoice",
   },
   {
-    name: "otro",
+    name: "Clientes",
     icon: "",
-    path: "/otro",
+    path: "/clients",
   },
 ];
