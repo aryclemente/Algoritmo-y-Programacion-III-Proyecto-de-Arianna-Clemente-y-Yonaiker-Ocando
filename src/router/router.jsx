@@ -5,23 +5,25 @@ export default [
     path: "/",
   },
   {
-    name: "Productos",
-    icon: "",
-    path: "/product",
-  },
-  {
-    name: "Documentos",
-    icon: "",
-    path: "/document",
-  },
-  {
     name: "Facturar",
     icon: "",
     path: "/invoice",
+  },
+  {
+    name: "Productos",
+    icon: "",
+    path: "/product",
   },
   {
     name: "Clientes",
     icon: "",
     path: "/clients",
   },
+  {
+    name: "Documentos",
+    icon: "",
+    path: "/document",
+  },
+  
+  
 ];

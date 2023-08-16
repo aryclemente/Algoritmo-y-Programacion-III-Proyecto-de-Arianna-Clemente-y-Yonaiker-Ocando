@@ -1,4 +1,4 @@
-/* use client */
+/* use product */
 import List from "@/component/Product/List";
 import React from "react";
 

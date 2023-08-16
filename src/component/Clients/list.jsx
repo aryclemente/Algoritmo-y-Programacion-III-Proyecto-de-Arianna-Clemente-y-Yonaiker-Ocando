@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import product from "../../data/product.json";
+import clients from "../../data/user.json";
 /* use client */
-const List = () => {
-  const [currencyProduct, setcurrencyProduct] = useState(product);
+const list = () => {
+  const [currencyClient, setcurrencyClient] = useState(clients);
 
-  console.log(currencyProduct);
+  console.log(currencyClient);
   return (
     <div className="p-8">
       <div className="overflow-x-auto">
@@ -19,14 +19,14 @@ const List = () => {
                 </label>
               </th>
               <th>Nombre</th>
-              <th>Precio</th>
-              <th>Categoría</th>
+              <th>Apellido</th>
+              <th>Cedula</th>
               <th></th>
             </tr>
           </thead>
           <tbody>
             {/* row 1 */}
-            {currencyProduct.map((product) => (
+            {currencyClient.map((clients) => (
               <tr>
                 <th>
                   <label>
@@ -35,23 +35,15 @@ const List = () => {
                 </th>
                 <td>
                   <div className="flex items-center space-x-3">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img
-                          src={product.imagen}
-                          alt="Avatar Tailwind CSS Component"
-                        />
-                      </div>
-                    </div>
                     <div>
-                      <div className="font-bold">{product.name}</div>
+                      <div className="font-bold">{clients.first_name}</div>
                     </div>
                   </div>
                 </td>
-                <td>{product.price}</td>
-                <td>{product.category}</td>
+                <td>{clients.last_name}</td>
+                <td>{clients.ci}</td>
                 <th>
-                  <button className="btn btn-ghost btn-xs">Detalles</button>
+                  <button className="btn btn-ghost btn-xs">Ver más</button>
                 </th>
               </tr>
             ))}
@@ -59,9 +51,10 @@ const List = () => {
           {/* foot */}
           <tfoot>
             <tr>
-            <th>Nombre</th>
-              <th>Precio</th>
-              <th>Categoría</th>
+              <th></th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Cedula</th>
               <th></th>
             </tr>
           </tfoot>
@@ -71,4 +64,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default list;
