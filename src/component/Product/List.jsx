@@ -5,7 +5,9 @@ import product from "../../data/product.json";
 const List = () => {
   const [currencyProduct, setcurrencyProduct] = useState(product);
 
-  console.log(currencyProduct);
+  const showDetail = () => {};
+
+  // console.log(currencyProduct);
   return (
     <div className="p-8">
       <div className="overflow-x-auto">
@@ -51,7 +53,9 @@ const List = () => {
                 <td>{product.price}</td>
                 <td>{product.category}</td>
                 <th>
-                  <button className="btn btn-ghost btn-xs">details</button>
+                  <button className="btn btn-ghost btn-xs" onClick={showDetail}>
+                    detalles
+                  </button>
                 </th>
               </tr>
             ))}
@@ -60,9 +64,9 @@ const List = () => {
           <tfoot>
             <tr>
               <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Categoría</th>
               <th></th>
             </tr>
           </tfoot>
