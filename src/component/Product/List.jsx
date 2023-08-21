@@ -1,24 +1,19 @@
 "use client";
 import React, { useState } from "react";
 import products from "../../data/product.json";
-/* use client */
-const List = () => {
-  const [currentProduct, setCurrentProduct] = useState(products);
-import product from "../../data/product.json";
 import { AiFillPlusCircle } from "react-icons/ai";
-/* use client */
 const List = () => {
-  const [currencyProduct, setCurrencyProduct] = useState(product);
+  const [currentProduct, setCurrentProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const productsPerPage = 15;
 
-  const totalPages = Math.ceil(currencyProduct.length / productsPerPage);
+  const totalPages = Math.ceil(products.length / productsPerPage);
 
   // Calcula el índice inicial y final de los productos a mostrar en la página actual
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = currencyProduct.slice(
+  const currentNowProducts = products.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
@@ -53,6 +48,21 @@ const List = () => {
       </div>
       {/* // */}
       <div className="overflow-x-auto">
+        <div className="text-center pb-5">
+          <div className="join">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index + 1}
+                className={`join-item btn ${
+                  currentPage === index + 1 ? "btn-active" : ""
+                }`}
+                onClick={() => setCurrentPage(index + 1)}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+        </div>
         <table className="table">
           {/* head */}
           <thead>
@@ -65,14 +75,8 @@ const List = () => {
             </tr>
           </thead>
           <tbody>
-            {/* row 1 */}
-<<<<<<< HEAD
-            {products.map((product) => (
-              <tr>
-=======
-            {currentProducts.map((product) => (
+            {currentNowProducts.map((product) => (
               <tr key={product.id}>
->>>>>>> e99b3a59ba0affef6aaa98693cfe7c9f7ed3f24b
                 <td>
                   <div className="">{product.id}</div>
                 </td>
@@ -105,7 +109,8 @@ const List = () => {
           {/* foot */}
           <tfoot>
             <tr>
-              <th>Nombre</th>
+              <th className="">ID</th>
+              <th className="text-center">Nombre</th>
               <th>Precio</th>
               <th>Categoría</th>
               <th></th>
@@ -114,8 +119,8 @@ const List = () => {
         </table>
       </div>
 
-      {/* listado */}
-      <div className="text-center">
+      {/* paginado */}
+      <div className="text-center pt-5">
         <div className="join">
           {Array.from({ length: totalPages }, (_, index) => (
             <button
