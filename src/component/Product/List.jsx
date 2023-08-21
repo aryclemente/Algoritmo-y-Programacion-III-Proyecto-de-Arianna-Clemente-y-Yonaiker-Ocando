@@ -1,27 +1,29 @@
 "use client";
 import React, { useState } from "react";
-import product from "../../data/product.json";
+import products from "../../data/product.json";
 /* use client */
 const List = () => {
-  const [currencyProduct, setcurrencyProduct] = useState(product);
+  const [currentProduct, setCurrentProduct] = useState(products);
 
   // console.log(currencyProduct);
   return (
     <div className="p-8">
       {/* // */}
       <input type="checkbox" id="my-modal" className="modal-toggle" />
-      <div className="modal">
+      <div className="modal ">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">
-            Congratulations random Internet user!
-          </h3>
-          <p className="py-4">
-            You've been selected for a chance to get one year of subscription to
-            use Wikipedia for free!
-          </p>
-          <div className="modal-action">
-            <label htmlFor="my-modal" className="btn">
-              Yay!
+          <div className="card lg:card-side bg-base-100 ">
+            <figure>
+              <img src={currentProduct.imagen} alt="img" />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">{currentProduct.name}</h2>
+              <p>Precio: {currentProduct.price}</p>
+            </div>
+          </div>
+          <div className="card-actions justify-end">
+            <label className="btn btn-primary" htmlFor="my-modal">
+              Cerrar
             </label>
           </div>
         </div>
@@ -40,7 +42,7 @@ const List = () => {
           </thead>
           <tbody>
             {/* row 1 */}
-            {currencyProduct.map((product) => (
+            {products.map((product) => (
               <tr>
                 <td>
                   <div className="flex items-center space-x-3">
@@ -60,8 +62,12 @@ const List = () => {
                 <td>{product.price}</td>
                 <td>{product.category}</td>
                 <th>
-                  <label className="btn btn-ghost btn-xs" htmlFor="my-modal">
-                    detalles
+                  <label
+                    htmlFor="my-modal"
+                    className="btn"
+                    onClick={() => setCurrentProduct(product)}
+                  >
+                    Detalles
                   </label>
                 </th>
               </tr>
