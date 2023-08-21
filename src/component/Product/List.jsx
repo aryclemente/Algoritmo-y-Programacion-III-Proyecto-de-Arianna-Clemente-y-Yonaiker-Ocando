@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import products from "../../data/product.json";
 import { AiFillPlusCircle } from "react-icons/ai";
 const List = () => {
-  const [currentProduct, setCurrentProduct] = useState(null);
+  const [currentProduct, setCurrentProduct] = useState(products);
   const [currentPage, setCurrentPage] = useState(1);
 
   const productsPerPage = 15;
