@@ -2,7 +2,7 @@
 import List from "@/component/Product/List";
 import React from "react";
 
-const Product = () => {
+const ProductPage = () => {
   return (
     <div className="">
       <List />
@@ -10,4 +10,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductPage;

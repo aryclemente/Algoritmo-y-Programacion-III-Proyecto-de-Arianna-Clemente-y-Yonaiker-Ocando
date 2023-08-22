@@ -1,30 +1,58 @@
 "use client";
 import React, { useState } from "react";
-import products from "../../data/product.json";
-import { AiFillPlusCircle } from "react-icons/ai";
-const List = () => {
-  const [currentProduct, setCurrentProduct] = useState(products);
+import invoices from "../../data/factura.json";
+import { TbListDetails } from "react-icons/tb";
+import { BiSolidFilePdf } from "react-icons/bi";
+
+const ListInvoice = () => {
+  const [currentProduct, setCurrentProduct] = useState(invoices);
   const [currentPage, setCurrentPage] = useState(1);
 
   const productsPerPage = 15;
 
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const totalPages = Math.ceil(invoices.length / productsPerPage);
 
   // Calcula el índice inicial y final de los productos a mostrar en la página actual
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentNowProducts = products.slice(
+  const currentNowProducts = invoices.slice(
     indexOfFirstProduct,
     indexOfLastProduct
   );
 
-  // console.log(currencyProduct);
   return (
     <div className="p-8 ">
-      <div className=" text-end ">
-        <button className="btn text-xl ">
-          <AiFillPlusCircle />
-        </button>
+      <div className="pb-2">
+        <div className=" text-start  rounded-md bg-slate-800 p-3">
+          <div className="font-bold text-xl pb-4">Busqueda</div>
+          <div className="form-control d-flex flex-row gap-6">
+            <input
+              type="text"
+              placeholder="Search"
+              className="input input-bordered w-44"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              className="input input-bordered w-44"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              className="input input-bordered w-44"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              className="input input-bordered w-44"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              className="input input-bordered w-44"
+            />
+          </div>
+        </div>
       </div>
       {/* // */}
       <input type="checkbox" id="my-modal" className="modal-toggle" />
@@ -68,10 +96,13 @@ const List = () => {
           <thead>
             <tr>
               <th className="">ID</th>
-              <th className="text-center">Nombre</th>
-              <th>Precio</th>
-              <th>Categoría</th>
-              <th></th>
+              <th className="">Tipo</th>
+              <th>Serie</th>
+              <th>Documento</th>
+              <th>Fecha Emisión</th>
+              <th>Cliente</th>
+              <th>Total</th>
+              <th className="text-center">Acción</th>
             </tr>
           </thead>
           <tbody>
@@ -81,27 +112,30 @@ const List = () => {
                   <div className="">{product.id}</div>
                 </td>
                 <td>
-                  <div className="flex items-center space-x-14">
-                    <div className="avatar">
-                      <div className="mask mask-squircle w-12 h-12">
-                        <img src={product.imagen} alt="photo product" />
-                      </div>
-                    </div>
-                    <div>
-                      <div className="font-bold">{product.name}</div>
-                    </div>
-                  </div>
+                  <div className="">{product.type}</div>
                 </td>
-                <td>{product.price}</td>
-                <td>{product.category}</td>
+                <td>{product.serie}</td>
+                <td>{product.doc}</td>
+                <td>{product.date}</td>
+                <td>{product.client}</td>
+                <td>{product.total}</td>
                 <th>
-                  <label
-                    htmlFor="my-modal"
-                    className="btn"
-                    onClick={() => setCurrentProduct(product)}
-                  >
-                    Detalles
-                  </label>
+                  <div className="d-flex flex-row gap-4">
+                    <label
+                      htmlFor="my-modal"
+                      className="btn p-2 text-3xl"
+                      onClick={() => setCurrentProduct(product)}
+                    >
+                      <BiSolidFilePdf />
+                    </label>
+                    <label
+                      htmlFor="my-modal"
+                      className="btn p-2 text-3xl"
+                      onClick={() => setCurrentProduct(product)}
+                    >
+                      <TbListDetails />
+                    </label>
+                  </div>
                 </th>
               </tr>
             ))}
@@ -110,10 +144,13 @@ const List = () => {
           <tfoot>
             <tr>
               <th className="">ID</th>
-              <th className="text-center">Nombre</th>
-              <th>Precio</th>
-              <th>Categoría</th>
-              <th></th>
+              <th className="">Tipo</th>
+              <th>Serie</th>
+              <th>Documento</th>
+              <th>Fecha Emisión</th>
+              <th>Cliente</th>
+              <th>Total</th>
+              <th className="text-center">Acción</th>
             </tr>
           </tfoot>
         </table>
@@ -139,4 +176,4 @@ const List = () => {
   );
 };
 
-export default List;
+export default ListInvoice;
