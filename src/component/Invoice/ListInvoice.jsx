@@ -31,11 +31,13 @@ const ListInvoice = () => {
               placeholder="Search"
               className="input input-bordered w-44"
             />
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-44"
-            />
+            <select className="select select-bordered">
+              <option disabled selected>
+                Pick category
+              </option>
+              <option>T-shirts</option>
+              <option>Mugs</option>
+            </select>
             <input
               type="text"
               placeholder="Search"
