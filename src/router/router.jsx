@@ -7,7 +7,7 @@ export default [
   {
     name: "Facturar",
     icon: "",
-    path: "/invoice",
+    path: "/facturar",
   },
   {
     name: "Productos",

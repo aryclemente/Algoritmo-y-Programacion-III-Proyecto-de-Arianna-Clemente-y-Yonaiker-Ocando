@@ -1,8 +1,8 @@
 /* use client */
-import List from "@/component/Product/List";
+import List from "@/component/facturar/listF";
 import React from "react";
 
-const Product = () => {
+const Factura = () => {
   return (
     <div className="">
       <List />
@@ -10,4 +10,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default Factura;
