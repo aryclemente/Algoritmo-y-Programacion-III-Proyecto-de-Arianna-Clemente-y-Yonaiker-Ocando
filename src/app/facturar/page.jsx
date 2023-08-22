@@ -1,11 +1,17 @@
 /* use client */
-import List from "@/component/facturar/listF";
+
+/* import Newfact from "@/component/fact/Newfact";
+import Statsfacts from "@/component/fact/Statsfact";
+ */
+import Listfact from "@/component/facturar/List";
 import React from "react";
 
 const Factura = () => {
   return (
     <div className="">
-      <List />
+      {/*  <Newfact />
+      <Statsfact /> */}
+      <Listfact />
     </div>
   );
 };

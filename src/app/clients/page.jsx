@@ -4,7 +4,7 @@
 import Statsclient from "@/component/Clients/Statsclient";
  */
 
-import Listclients from "@/component/Clients/list";
+import Listclients from "@/component/Clients/List";
 import React from "react";
 
 const Client = () => {

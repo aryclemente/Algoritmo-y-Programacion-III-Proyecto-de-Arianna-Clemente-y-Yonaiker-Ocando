@@ -52,17 +52,7 @@ const Aside = () => {
             );
           })}
 
-          <li>
-            <Link
-              href="#"
-              className="group flex items-center space-x-4 rounded-md px-4 py-3 "
-            >
-              <FaRegFolderOpen className="text-xl" />
-              <span className="group-hover:text-gray-700 dark:group-hover:text-gray-50">
-                Documento
-              </span>
-            </Link>
-          </li>
+          
         </ul>
       </div>
 

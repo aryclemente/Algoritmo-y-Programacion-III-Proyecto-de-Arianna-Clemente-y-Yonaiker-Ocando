@@ -10,7 +10,7 @@ const Product = () => {
   return (
     <div className="">
        {/*  <Newproduct />
-      <Statsptoducts /> */}
+      <Statsproducts /> */}
       <Listproduct />
     </div>
   );

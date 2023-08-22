@@ -6,7 +6,7 @@ const MenuHorizontal = () => {
       <div className="sticky top-0 h-16 border-b bg-white dark:bg-gray-800 dark:border-gray-700 lg:py-2.5">
         <div className="flex items-center justify-between space-x-4 px-6 2xl:container">
           <h5 className="text-2xl font-medium text-gray-600 lg:block dark:text-white">
-            Dashboard 222
+            FACT-IUJO
           </h5>
           <button className="-mr-2 h-16 w-12 border-r lg:hidden dark:border-gray-700 dark:text-gray-300">
             <svg

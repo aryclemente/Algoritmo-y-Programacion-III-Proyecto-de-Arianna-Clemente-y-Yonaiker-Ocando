@@ -20,10 +20,16 @@ export default [
     path: "/clients",
   },
   {
-    name: "Documentos",
+    name: "Usuario",
     icon: "",
-    path: "/document",
+    path: "/edituser",
   },
+  {
+    name: "Empresa",
+    icon: "",
+    path: "/business",
+  },
+  
   
   
 ];
