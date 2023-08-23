@@ -6,7 +6,7 @@ import Statsproducts from "@/component/product/Statsproducts";
 import Listproduct from "@/component/Product/List";
 import React from "react";
 
-const Product = () => {
+const ProductPage = () => {
   return (
     <div className="">
        {/*  <Newproduct />
@@ -16,4 +16,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ProductPage;

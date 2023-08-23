@@ -1,7 +1,12 @@
+import { CiMenuKebab } from "react-icons/ci";
+import { AiFillShop } from "react-icons/ai";
+import { BsFillFolderFill } from "react-icons/bs";
+import { FaFileInvoice } from "react-icons/fa";
+
 export default [
   {
     name: "Inicio",
-    icon: "",
+    icon: <CiMenuKebab />,
     path: "/",
   },
   {
@@ -11,21 +16,23 @@ export default [
   },
   {
     name: "Productos",
-    icon: "",
+    icon: <AiFillShop />,
     path: "/product",
   },
   {
-    name: "Clientes",
-    icon: "",
-    path: "/clients",
+
+    name: "Facturar",
+    icon: <FaFileInvoice />,
+    path: "/invoice",
   },
   {
-    name: "Usuario",
-    icon: "",
-    path: "/edituser",
+    name: "Documentos",
+    icon: <BsFillFolderFill />,
+    path: "/document",
   },
+
   {
-    name: "Empresa",
+    name: "otro",
     icon: "",
     path: "/business",
   },

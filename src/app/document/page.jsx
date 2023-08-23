@@ -1,7 +1,8 @@
+import ListDocument from "@/component/Document/ListDocument";
 import React from "react";
-//Yona pa que es esto ? 
-const Document = () => {
-  return <div>page</div>;
+
+const DocumentPage = () => {
+  return <ListDocument />;
 };
 
-export default Document;
+export default DocumentPage;
