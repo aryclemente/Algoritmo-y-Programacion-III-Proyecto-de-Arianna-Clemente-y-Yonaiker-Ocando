@@ -20,7 +20,6 @@ export default [
     path: "/product",
   },
   {
-
     name: "Facturar",
     icon: <FaFileInvoice />,
     path: "/invoice",
@@ -32,11 +31,8 @@ export default [
   },
 
   {
-    name: "otro",
+    name: "Configuración",
     icon: "",
-    path: "/business",
+    path: "/config",
   },
-  
-  
-  
 ];
