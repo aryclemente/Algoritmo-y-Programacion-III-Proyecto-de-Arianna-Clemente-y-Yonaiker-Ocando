@@ -95,6 +95,7 @@ const List = () => {
                 <td>{product.price}</td>
                 <td>{product.category}</td>
                 <th>
+
                   <label
                     htmlFor="my-modal"
                     className="btn"
@@ -102,6 +103,9 @@ const List = () => {
                   >
                     Detalles
                   </label>
+
+                  <button className="btn btn-ghost btn-xs">Detalles</button>
+
                 </th>
               </tr>
             ))}
@@ -109,8 +113,12 @@ const List = () => {
           {/* foot */}
           <tfoot>
             <tr>
+
               <th className="">ID</th>
               <th className="text-center">Nombre</th>
+
+            <th>Nombre</th>
+
               <th>Precio</th>
               <th>Categoría</th>
               <th></th>

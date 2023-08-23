@@ -3,7 +3,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Aside from "@/component/Aside";
-import MenuHorizontal from "@/component/ManuHorizontal";
+import MenuHorizontal from "@/component/MenuHorizontal";
 
 import { usePathname } from "next/navigation";
 

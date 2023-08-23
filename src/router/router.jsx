@@ -10,11 +10,17 @@ export default [
     path: "/",
   },
   {
+    name: "Facturar",
+    icon: "",
+    path: "/facturar",
+  },
+  {
     name: "Productos",
     icon: <AiFillShop />,
     path: "/product",
   },
   {
+
     name: "Facturar",
     icon: <FaFileInvoice />,
     path: "/invoice",
@@ -28,6 +34,9 @@ export default [
   {
     name: "otro",
     icon: "",
-    path: "/otro",
+    path: "/business",
   },
+  
+  
+  
 ];

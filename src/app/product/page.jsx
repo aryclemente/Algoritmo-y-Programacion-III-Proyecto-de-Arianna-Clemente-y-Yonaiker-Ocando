@@ -1,11 +1,17 @@
 /* use client */
-import List from "@/component/Product/List";
+
+/* import Newproduct from "@/component/product/Newproduct";
+import Statsproducts from "@/component/product/Statsproducts";
+ */
+import Listproduct from "@/component/Product/List";
 import React from "react";
 
 const ProductPage = () => {
   return (
     <div className="">
-      <List />
+       {/*  <Newproduct />
+      <Statsproducts /> */}
+      <Listproduct />
     </div>
   );
 };
