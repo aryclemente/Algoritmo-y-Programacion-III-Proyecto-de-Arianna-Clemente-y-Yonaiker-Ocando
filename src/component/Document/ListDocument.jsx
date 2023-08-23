@@ -4,7 +4,7 @@ import invoices from "../../data/factura.json";
 import { TbListDetails } from "react-icons/tb";
 import { BiSolidFilePdf } from "react-icons/bi";
 
-const ListInvoice = () => {
+const ListDocument = () => {
   const [currentProduct, setCurrentProduct] = useState(invoices);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -25,22 +25,23 @@ const ListInvoice = () => {
       <div className="pb-2">
         <div className=" text-start  rounded-md bg-slate-800 p-3">
           <div className="font-bold text-xl pb-4">Busqueda</div>
-          <div className="form-control d-flex flex-row gap-6">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-44"
-            />
-            <select className="select select-bordered">
+          <div className="form-control d-flex flex-row gap-4">
+            <select className="select select-bordered ">
               <option disabled selected>
-                Pick category
+                Tipo
               </option>
-              <option>T-shirts</option>
-              <option>Mugs</option>
+              <option>FA</option>
+              <option>NC</option>
+              <option>ND</option>
             </select>
             <input
-              type="text"
-              placeholder="Search"
+              type="number"
+              placeholder="N. Documento"
+              className="input input-bordered w-40"
+            />
+            <input
+              type="date"
+              placeholder="Fecha "
               className="input input-bordered w-44"
             />
             <input
@@ -178,4 +179,4 @@ const ListInvoice = () => {
   );
 };
 
-export default ListInvoice;
+export default ListDocument;

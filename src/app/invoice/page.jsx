@@ -1,8 +1,7 @@
-import ListInvoice from "@/component/Invoice/ListInvoice";
 import React from "react";
 
 const InvoicePage = () => {
-  return <ListInvoice />;
+  return <div className="">InvoicePage</div>;
 };
 
 export default InvoicePage;

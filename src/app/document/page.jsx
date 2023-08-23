@@ -1,7 +1,8 @@
+import ListDocument from "@/component/Document/ListDocument";
 import React from "react";
 
 const DocumentPage = () => {
-  return <div>DocumentPage</div>;
+  return <ListDocument />;
 };
 
 export default DocumentPage;
