@@ -9,9 +9,9 @@ export default [
     path: "/",
   },
   {
-    name: "Facturar",
-    icon: "",
-    path: "/facturar",
+    name: "Clientes",
+    icon: <BiSolidUser />,
+    path: "/clientes",
   },
   {
     name: "Productos",
