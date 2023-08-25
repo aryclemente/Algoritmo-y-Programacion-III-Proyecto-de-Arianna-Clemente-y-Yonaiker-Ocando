@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import products from "../../data/product.json";
 import { AiFillPlusCircle } from "react-icons/ai";
 const List = () => {
-  const [currentProduct, setCurrentProduct] = useState(products);
+  const [currentProduct, setCurrentProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const productsPerPage = 15;
@@ -21,24 +21,21 @@ const List = () => {
   // console.log(currencyProduct);
   return (
     <div className="p-8 ">
-      <div className=" text-end ">
-        <button className="btn text-xl ">
-          <AiFillPlusCircle />
-        </button>
-      </div>
       {/* // */}
       <input type="checkbox" id="my-modal" className="modal-toggle" />
       <div className="modal ">
         <div className="modal-box">
-          <div className="card lg:card-side bg-base-100 ">
-            <figure>
-              <img src={currentProduct.imagen} alt="img" />
-            </figure>
-            <div className="card-body">
-              <h2 className="card-title">{currentProduct.name}</h2>
-              <p>Precio: {currentProduct.price}</p>
+          {currentProduct && (
+            <div className="card lg:card-side bg-base-100 ">
+              <figure>
+                <img src={currentProduct.image} alt="img" />
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title">{currentProduct.name}</h2>
+                <p>Precio: {currentProduct.price}</p>
+              </div>
             </div>
-          </div>
+          )}
           <div className="card-actions justify-end">
             <label className="btn btn-primary" htmlFor="my-modal">
               Cerrar
@@ -75,7 +72,7 @@ const List = () => {
             </tr>
           </thead>
           <tbody>
-            {currentNowProducts.map((product) => (
+            {currentNowProducts.map((product, i) => (
               <tr key={product.id}>
                 <td>
                   <div className="">{product.id}</div>
@@ -84,7 +81,10 @@ const List = () => {
                   <div className="flex items-center space-x-14">
                     <div className="avatar">
                       <div className="mask mask-squircle w-12 h-12">
-                        <img src={product.imagen} alt="photo product" />
+                        <img
+                          src={"https://picsum.photos/200/30" + i}
+                          alt="photo product"
+                        />
                       </div>
                     </div>
                     <div>
@@ -95,17 +95,18 @@ const List = () => {
                 <td>{product.price}</td>
                 <td>{product.category}</td>
                 <th>
-
                   <label
                     htmlFor="my-modal"
                     className="btn"
-                    onClick={() => setCurrentProduct(product)}
+                    onClick={() =>
+                      setCurrentProduct({
+                        ...product,
+                        image: "https://picsum.photos/200/30" + i,
+                      })
+                    }
                   >
                     Detalles
                   </label>
-
-                  <button className="btn btn-ghost btn-xs">Detalles</button>
-
                 </th>
               </tr>
             ))}
@@ -113,11 +114,10 @@ const List = () => {
           {/* foot */}
           <tfoot>
             <tr>
-
               <th className="">ID</th>
               <th className="text-center">Nombre</th>
 
-            <th>Nombre</th>
+              <th>Nombre</th>
 
               <th>Precio</th>
               <th>Categoría</th>
