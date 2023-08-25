@@ -1,8 +1,14 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Button from "../Button";
+import categories from "../../data/category.json";
+import img_generic from "../../assets/generic/img-generic.png";
 
 const AddProduct = () => {
+  const [currentCategorys, setCurrentCategorys] = useState(null);
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
   const click = () => {
     console.log("hola mundo");
   };
@@ -10,6 +16,7 @@ const AddProduct = () => {
     <div className="px-16 py-10 h-full">
       <div className="text-3xl font-semibold pb-4">Nuevo Producto</div>
       <div className="grid grid-cols-2 gap-10">
+        {/* columna izqueirda */}
         <div className="">
           <form>
             <div class="grid md:grid-cols-2 md:gap-6">
@@ -52,13 +59,19 @@ const AddProduct = () => {
                   <option disabled selected>
                     Categoría
                   </option>
-                  <option>Svelte</option>
-                  <option>Vue</option>
-                  <option>React</option>
+                  {categories.map((category, i) => (
+                    <option>{category.name}</option>
+                  ))}
                 </select>
               </div>
               <div class="relative z-0 w-full mb-6 group">
-                <input type="file" className="file-input w-full max-w-xs" />
+                <input
+                  type="file"
+                  className="file-input w-full max-w-xs"
+                  onChange={(e) =>
+                    setSelectedImage(URL.createObjectURL(e.target.files[0]))
+                  }
+                />
               </div>
             </div>
 
@@ -67,10 +80,11 @@ const AddProduct = () => {
             </div>
           </form>
         </div>
+        {/* columna derecha */}
         <div className="text-center">
           <div className="avatar">
             <div className="w-72 rounded-xl">
-              <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+              <img src={selectedImage || img_generic.src} />
             </div>
           </div>
         </div>
