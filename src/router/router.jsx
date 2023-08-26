@@ -1,6 +1,8 @@
 import { CiMenuKebab } from "react-icons/ci";
 import { AiFillShop, AiOutlineFileText } from "react-icons/ai";
 import { BsFillGearFill } from "react-icons/bs";
+import { BiSolidUser } from "react-icons/bi";
+
 
 export default [
   {
@@ -11,7 +13,7 @@ export default [
   {
     name: "Clientes",
     icon: <BiSolidUser />,
-    path: "/clientes",
+    path: "/clients",
   },
   {
     name: "Productos",

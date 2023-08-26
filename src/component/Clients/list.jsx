@@ -1,13 +1,30 @@
 "use client";
 import React, { useState } from "react";
 import clients from "../../data/user.json";
+import Modal from "../Clients/NewClient";
+
 /* use client */
 const list = () => {
   const [currencyClient, setcurrencyClient] = useState(clients);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   console.log(currencyClient);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+  
+  
   return (
+    <>
+    
     <div className="p-8">
+      
+
       <div className="overflow-x-auto">
         <table className="table">
           {/* head */}
@@ -61,6 +78,7 @@ const list = () => {
         </table>
       </div>
     </div>
+    </>
   );
 };
 
