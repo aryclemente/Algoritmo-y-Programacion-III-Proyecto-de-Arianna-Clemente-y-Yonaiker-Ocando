@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import invoices from "../../data/factura.json";
 import { TbListDetails } from "react-icons/tb";
 import { BiSolidFilePdf } from "react-icons/bi";
-import { AiOutlineFileText, AiFillPlusCircle } from "react-icons/ai";
 
 const ListDocument = () => {
   const [currentProduct, setCurrentProduct] = useState(invoices);
@@ -24,12 +23,6 @@ const ListDocument = () => {
   return (
     <div className="p-8 ">
       <div className="pb-2">
-        <div className="pb-3 text-end ">
-          <button className="btn text-xl ">
-            <div className="">Crear Factura</div>
-            <AiOutlineFileText />
-          </button>
-        </div>
         <div className=" text-start  rounded-md bg-slate-800 p-3">
           <div className="font-bold text-xl pb-4">Busqueda</div>
           <div className="form-control d-flex flex-row gap-4">
