@@ -21,7 +21,7 @@ const List = () => {
   // console.log(currencyProduct);
   return (
     <div className="p-8 ">
-      {/* // */}
+      {/* /detalles/ */}
       <input type="checkbox" id="my-modal" className="modal-toggle" />
       <div className="modal ">
         <div className="modal-box">
@@ -68,7 +68,7 @@ const List = () => {
               <th className="text-center">Nombre</th>
               <th>Precio</th>
               <th>Categoría</th>
-              <th></th>
+              <th>Acción</th>
             </tr>
           </thead>
           <tbody>
@@ -116,12 +116,9 @@ const List = () => {
             <tr>
               <th className="">ID</th>
               <th className="text-center">Nombre</th>
-
-              <th>Nombre</th>
-
               <th>Precio</th>
               <th>Categoría</th>
-              <th></th>
+              <th>Acción</th>
             </tr>
           </tfoot>
         </table>

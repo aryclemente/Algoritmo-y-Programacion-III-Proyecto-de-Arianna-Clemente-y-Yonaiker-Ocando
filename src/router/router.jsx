@@ -21,7 +21,7 @@ export default [
   {
     name: "Facturas",
     icon: <AiOutlineFileText />,
-    path: "/document",
+    path: "/invoice",
   },
 
   {
