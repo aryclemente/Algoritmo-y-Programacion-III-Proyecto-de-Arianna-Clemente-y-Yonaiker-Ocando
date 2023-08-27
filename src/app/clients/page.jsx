@@ -1,18 +1,15 @@
-/* use client */
+"use client";
 
-/* import Newclient from "@/component/Clients/Newclient";
-import Statsclient from "@/component/Clients/Statsclient";
- */
-
-import Listclients from "@/component/Clients/List";
 import React from "react";
+import Button from "@/component/Clients/AddClient";
+import Listclients from "@/component/Clients/List";
 
 const Client = () => {
   return (
     <div className="">
       {/*  <Newclient />
       <Statsclients /> */}
-
+      <Button /> 
       <Listclients />
     </div>
   );
