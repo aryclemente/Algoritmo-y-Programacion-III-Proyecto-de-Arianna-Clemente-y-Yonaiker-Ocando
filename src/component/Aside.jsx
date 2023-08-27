@@ -7,6 +7,15 @@ import router from "@/router/router";
 
 const Aside = () => {
   const pathName = usePathname();
+
+  const singUp = () => {
+    confirm("Desea Cerrar Sesion?");
+    if (confirm) {
+      console.log("cerraste sesion");
+    } else {
+      console.log("no   cerrar sesion");
+    }
+  };
   return (
     <aside className="fixed top-0 z-10 ml-[-100%] flex h-screen w-full flex-col justify-between border-r bg-white px-6 pb-3 transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%] dark:bg-gray-800 dark:border-gray-700">
       <div>
@@ -44,12 +53,14 @@ const Aside = () => {
               </li>
             );
           })}
-
         </ul>
       </div>
 
       <div className="-mx-6 flex items-center justify-between border-t px-6 pt-4 dark:border-gray-700">
-        <button className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300">
+        <button
+          className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
+          onClick={singUp}
+        >
           <FaDoorOpen />
           <span className="group-hover:text-gray-700 dark:group-hover:text-white">
             Cerrar Sesión
