@@ -327,6 +327,7 @@ function Stats() {
               </table>
             </div>
           </div>
+          {/* Fin 1 */}
           <div>
             <div className="h-full group p-6 sm:p-8 rounded-3xl bg-white border border-gray-200/50 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
               <h5 className="text-xl text-gray-700 dark:text-gray-300">
@@ -516,6 +517,8 @@ function Stats() {
             </div>
           </div>
           <div>
+
+            {/* Fin 2 */}
             <div className="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-200/50 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10 lg:h-full">
               <svg
                 className="m-auto w-40"
