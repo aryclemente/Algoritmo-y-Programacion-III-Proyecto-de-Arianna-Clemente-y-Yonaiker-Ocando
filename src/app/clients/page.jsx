@@ -1,15 +1,17 @@
 "use client";
 
 import React from "react";
-import Button from "@/component/Clients/AddClient";
-import Listclients from "@/component/Clients/List";
+import NewClient from "@/component/Clients/AddClient";
+
+import Listclients from "@/component/Clients/list";
 
 const Client = () => {
   return (
     <div className="">
       {/*  <Newclient />
       <Statsclients /> */}
-      <Button /> 
+      <NewClient />
+      
       <Listclients />
     </div>
   );
