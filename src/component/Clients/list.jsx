@@ -7,6 +7,19 @@ import Modal from "../Clients/NewClient";
 const list = () => {
   const [currencyClient, setcurrencyClient] = useState(clients);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const clientsPerPage = 15;
+  const totalPages = Math.ceil(clients.length / clientsPerPage);
+
+  // Calcula el índice inicial y final de los clientes a mostrar en la página actual
+  const indexOfLastClient = currentPage * clientsPerPage;
+  const indexOfFirstClient = indexOfLastClient - clientsPerPage;
+  const currentNowclients = clients.slice(
+    indexOfFirstClient,
+    indexOfLastClient
+  );
+
 
   console.log(currencyClient);
 
@@ -26,14 +39,27 @@ const list = () => {
       
 
       <div className="overflow-x-auto">
+      <div className="text-center pb-5">
+          <div className="join">
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index + 1}
+                className={`join-item btn ${
+                  currentPage === index + 1 ? "btn-active" : ""
+                }`}
+                onClick={() => setCurrentPage(index + 1)}
+              >
+                {index + 1}
+              </button>
+            ))}
+          </div>
+        </div>
         <table className="table">
           {/* head */}
           <thead>
             <tr>
               <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
+                ID
               </th>
               <th>Nombre</th>
               <th>Apellido</th>
@@ -45,11 +71,8 @@ const list = () => {
             {/* row 1 */}
             {currencyClient.map((clients) => (
               <tr>
-                <th>
-                  <label>
-                    <input type="checkbox" className="checkbox" />
-                  </label>
-                </th>
+                
+                <td>{clients.id}</td>
                 <td>
                   <div className="flex items-center space-x-3">
                     <div>
@@ -68,7 +91,7 @@ const list = () => {
           {/* foot */}
           <tfoot>
             <tr>
-              <th></th>
+              <th>ID</th>
               <th>Nombre</th>
               <th>Apellido</th>
               <th>Cedula</th>
@@ -76,6 +99,21 @@ const list = () => {
             </tr>
           </tfoot>
         </table>
+      </div>
+      <div className="text-center pt-5">
+        <div className="join">
+          {Array.from({ length: totalPages }, (_, index) => (
+            <button
+              key={index + 1}
+              className={`join-item btn ${
+                currentPage === index + 1 ? "btn-active" : ""
+              }`}
+              onClick={() => setCurrentPage(index + 1)}
+            >
+              {index + 1}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
     </>
