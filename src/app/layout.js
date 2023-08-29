@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   // const isPublic = publicRoutes.includes(pathName);
 
   return (
-    <html lang="es">
+    <html lang="es" data-theme="synthwave">
       {/* <link
         href="https://cdn.jsdelivr.net/npm/daisyui@3.2.1/dist/full.css"
         rel="stylesheet"
