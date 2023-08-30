@@ -7,7 +7,7 @@ import { AiFillPlusCircle } from "react-icons/ai";
 import Link from "next/link";
 const AddFactura = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [selectedClient, setSelectedClient] = useState(null);
+  const [selectedClient, setSelectedClient] = useState(false);
 
   const handleClientSearch = (event) => {
     const cedula = event.target.value;
@@ -16,11 +16,7 @@ const AddFactura = () => {
       client.ci.toString().startsWith(cedula)
     );
 
-    if (foundClient) {
-      setSelectedClient(foundClient);
-    } else {
-      alert("nada");
-    }
+    setSelectedClient(foundClient);
   };
   const click = () => {
     console.log("hola mundo", selectedClient);
@@ -28,6 +24,27 @@ const AddFactura = () => {
   return (
     <div className="px-16 py-10 h-full">
       <div className="text-3xl font-semibold pb-6">Facturar Producto</div>
+
+      {selectedClient === undefined && (
+        <div className="toast toast-top toast-center">
+          <div className="alert alert-info">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              className="stroke-current shrink-0 w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+            <span>El usuario no esta registrado, por favor registrarlo</span>
+          </div>
+        </div>
+      )}
       <div className="grid grid-cols-1 gap-10">
         {/* columna izqueirda */}
         <div className="">
@@ -39,7 +56,7 @@ const AddFactura = () => {
                     list="listClient"
                     name="browser"
                     id="browser"
-                    type="text"
+                    type="number"
                     class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required
@@ -51,15 +68,20 @@ const AddFactura = () => {
                       <option value={client.ci} />
                     ))}
                   </datalist>
-                  <label
+                  <div
                     for="floating_first_name"
-                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    className=" peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Cédula de Identidad
-                  </label>
+                  </div>
 
                   <div className=" text-2xl p-2">
-                    <Link href={"http://localhost:3001/clients"}>
+                    <Link
+                      href={{
+                        pathname: "/clients",
+                        query: { modalAddClient: true },
+                      }}
+                    >
                       <AiFillPlusCircle />
                     </Link>
                   </div>
