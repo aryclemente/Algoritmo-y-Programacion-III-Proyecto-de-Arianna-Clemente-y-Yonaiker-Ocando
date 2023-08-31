@@ -25,6 +25,7 @@ const AddFactura = () => {
     <div className="px-16 py-10 h-full">
       <div className="text-3xl font-semibold pb-6">Facturar Producto</div>
 
+      {/* toas de mensaje si el usuario no esta registrado */}
       {selectedClient === undefined && (
         <div className="toast toast-top toast-center">
           <div className="alert alert-info">
@@ -46,7 +47,6 @@ const AddFactura = () => {
         </div>
       )}
       <div className="grid grid-cols-1 gap-10">
-        {/* columna izqueirda */}
         <div className="">
           <form>
             <div className="grid md:grid-cols-3 md:gap-6">
@@ -87,17 +87,96 @@ const AddFactura = () => {
                   </div>
                 </div>
               </div>
-              {/* ... */}
-              {selectedClient && (
-                <div className="mt-4">
-                  <h3>Cliente Encontrado:</h3>
-                  <p>Nombre: {selectedClient.first_name}</p>
-                  <p>Nombre: {selectedClient.last_name}</p>
-                  <p>Cédula: {selectedClient.ci}</p>
-                  {/* Resto de los detalles del cliente */}
-                </div>
-              )}
-              {/* Resto del código... */}
+              <div class="relative z-0 w-full mb-4 group">
+                <input
+                  type="text"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  value={selectedClient ? selectedClient.first_name : ""}
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Nombre
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-4 group">
+                <input
+                  type="text"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  value={selectedClient ? selectedClient.last_name : ""}
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Apellido
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-4 group">
+                <input
+                  type="text"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  value={selectedClient ? selectedClient.phone : ""}
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Teléfono
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-4 group">
+                <input
+                  type="mail"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  value={selectedClient ? selectedClient.email : ""}
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Correo Electrónico
+                </label>
+              </div>
+              <div class="relative z-0 w-full mb-4 group">
+                <input
+                  type="text"
+                  name="floating_first_name"
+                  id="floating_first_name"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                  value={selectedClient ? selectedClient.address : ""}
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Dirección
+                </label>
+              </div>
+            </div>
+
+            <div className="divider py-4"></div>
+
+            <div className="grid md:grid-cols-3 md:gap-6">
               <div class="relative z-0 w-full mb-6 group">
                 <select className="select select-ghost w-full   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600">
                   <option disabled selected>
@@ -106,7 +185,7 @@ const AddFactura = () => {
                   <option>Factura</option>
                 </select>
               </div>
-              <div class="relative z-0 w-full mb-10 group">
+              <div class="relative z-0 w-full mb-4 group">
                 <input
                   type="text"
                   name="floating_first_name"
@@ -123,7 +202,7 @@ const AddFactura = () => {
                 </label>
               </div>
 
-              <div class="relative z-0 w-full mb-10 group">
+              <div class="relative z-0 w-full mb-4 group">
                 <input
                   type="text"
                   name="floating_first_name"
@@ -139,7 +218,7 @@ const AddFactura = () => {
                   Cliente
                 </label>
               </div>
-              <div class="relative z-0 w-full mb-10 group">
+              <div class="relative z-0 w-full mb-4 group">
                 <input
                   type="date"
                   name="floating_first_name"
@@ -155,7 +234,7 @@ const AddFactura = () => {
                   Fecha
                 </label>
               </div>
-              <div class="relative z-0 w-full mb-10 group">
+              <div class="relative z-0 w-full mb-4 group">
                 <input
                   type="number"
                   name="floating_last_name"
@@ -172,7 +251,7 @@ const AddFactura = () => {
                 </label>
               </div>
 
-              <div class="relative z-0 w-full mb-10 group">
+              <div class="relative z-0 w-full mb-4 group">
                 <input
                   type="number"
                   name="floating_last_name"
@@ -189,7 +268,7 @@ const AddFactura = () => {
                 </label>
               </div>
 
-              <div class="relative z-0 w-full mb-10 group">
+              <div class="relative z-0 w-full mb-4 group">
                 <input
                   type="number"
                   name="floating_last_name"
