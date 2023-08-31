@@ -9,8 +9,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
-    daisy: {
-      themes: false, //["synthwave"], // Agrega tu tema personalizado aquí
+    daisyui: {
+      themes: ["synthwave"], // Agrega tu tema personalizado aquí
     },
   },
 

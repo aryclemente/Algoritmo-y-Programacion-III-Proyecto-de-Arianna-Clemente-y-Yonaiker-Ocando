@@ -3,24 +3,32 @@ import React, { useState } from "react";
 import Button from "../Button";
 import categories from "../../data/category.json";
 import clients from "../../data/user.json";
+import products from "../../data/product.json";
 import { AiFillPlusCircle } from "react-icons/ai";
 import Link from "next/link";
 const AddFactura = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
   const [selectedClient, setSelectedClient] = useState(false);
+  const [selectProduct, setSelectProduct] = useState(false);
 
   const handleClientSearch = (event) => {
     const cedula = event.target.value;
 
-    const foundClient = clients.find((client) =>
-      client.ci.toString().startsWith(cedula)
-    );
+    const foundClient = !!cedula
+      ? clients.find((client) => client.ci.toString().startsWith(cedula))
+      : undefined;
 
     setSelectedClient(foundClient);
+  };
+
+  const handleProductSearch = (event) => {
+    const product = event.target.value;
+
+    setSelectProduct(product);
   };
   const click = () => {
     console.log("hola mundo", selectedClient);
   };
+
   return (
     <div className="px-16 py-10 h-full">
       <div className="text-3xl font-semibold pb-6">Facturar Producto</div>
@@ -49,6 +57,9 @@ const AddFactura = () => {
       <div className="grid grid-cols-1 gap-10">
         <div className="">
           <form>
+            <div className="pb-4 font-bold underline text-xl">
+              Datos del Cliente
+            </div>
             <div className="grid md:grid-cols-3 md:gap-6">
               <div className="relative z-0 w-full group">
                 <div className="flex">
@@ -171,6 +182,50 @@ const AddFactura = () => {
                 >
                   Dirección
                 </label>
+              </div>
+            </div>
+
+            <div className="divider py-4"></div>
+
+            <div className="">
+              <div className="pb-4 font-bold underline text-xl">
+                Datos del Producto
+              </div>
+              <div className="grid md:grid-cols-3 md:gap-6">
+                <div className="relative z-0 w-full group">
+                  <div className="flex">
+                    <select
+                      className="select select-bordered w-full max-w-xs"
+                      onChange={handleProductSearch}
+                      required
+                    >
+                      <option disabled selected>
+                        Seleccionar Producto
+                      </option>
+
+                      {products.map((product) => (
+                        <option value={product.name}>{product.name}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div class="relative z-0 w-full mb-4 group">
+                  <input
+                    type="text"
+                    name="floating_first_name"
+                    id="floating_first_name"
+                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    placeholder=" "
+                    required
+                    value={selectProduct}
+                  />
+                  <label
+                    for="floating_first_name"
+                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                  >
+                    Producto
+                  </label>
+                </div>
               </div>
             </div>
 
