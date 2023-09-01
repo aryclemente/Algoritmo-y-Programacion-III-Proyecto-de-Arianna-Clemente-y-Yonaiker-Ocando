@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import clients from "../../data/user.json";
-import Modal from "../Clients/NewClient";
 
 /* use client */
 const list = () => {
