@@ -3,9 +3,27 @@ import React, { useState } from "react";
 import Button from "../Button";
 import categories from "../../data/category.json";
 import img_generic from "../../assets/generic/img-generic.png";
+import { useSearchParams } from "next/navigation";
+import { AiFillPlusCircle } from "react-icons/ai";
+import { GrClose } from "react-icons/gr";
+
 
 const AddProduct = () => {
   const [currentCategorys, setCurrentCategorys] = useState(null);
+
+  const searchParams = useSearchParams(); // agarro lo que venga en la url y lo convierte en obj
+
+  const [isModalOpen, setIsModalOpen] = useState(
+    !!searchParams.get("modalAddClient")
+  ); // Estado para controlar si el modal está abierto o cerrado
+
+  const openModal = () => {
+    setIsModalOpen(true); // Abre el modal estableciendo el estado a true
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Cierra el modal estableciendo el estado a false
+  };
 
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -15,19 +33,31 @@ const AddProduct = () => {
     console.log("hola mundo");
   };
   return (
-    <div className="px-16 py-10 h-full">
-      <div className="text-3xl font-semibold pb-4">Nuevo Producto</div>
-      <div className="grid grid-cols-2 gap-10">
-        {/* columna izqueirda */}
-        <div className="">
-          <form>
-            <div class="grid md:grid-cols-2 md:gap-6">
-              <div class="relative z-0 w-full mb-10 group">
+    <div>
+      <div className=" flex items-center p-8">
+        <button
+          className=" drop-shadow-md bg-gradient-to-r from-sky-600 to-cyan-400 text-white font-bold px-5 py-4 rounded-full"
+          onClick={openModal}
+        >
+          <AiFillPlusCircle className=" mr-2" /> Nuevo Producto
+        </button>
+      </div>
+      {isModalOpen && (
+        // el otro
+        <div className="fixed inset-0 flex items-center justify-center z-50 m-auto">
+          <div className="bg-white rounded-lg drop-shadow-xl p-8">
+            <button className="btn btn-circle float-right" onClick={closeModal}>
+              <GrClose />
+            </button>
+            <h2 className="text-2xl font-bold mb-6 ">Nuevo Producto</h2>
+            <form>
+              <div class="grid md:grid-cols-2 md:gap-10">
+                <div class="relative z-0 w-full mb-10 group">
                 <input
                   type="text"
-                  name="floating_first_name"
-                  id="floating_first_name"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  name="name"
+                  id="name"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                   placeholder=" "
                   required
                 />
@@ -38,6 +68,24 @@ const AddProduct = () => {
                   Nombre
                 </label>
               </div>
+
+              <div class="relative z-0 w-full mb-10 group">
+                <input
+                  type="text"
+                  name="marca"
+                  id="marca"
+                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                  required
+                />
+                <label
+                  for="floating_first_name"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Marca
+                </label>
+              </div>
+
               <div class="relative z-0 w-full mb-10 group">
                 <input
                   type="number"
@@ -72,24 +120,12 @@ const AddProduct = () => {
                 </label>
               </div>
 
-              <div class="relative z-0 w-full mb-10 group">
-                <input
-                  type="number"
-                  name="floating_last_name"
-                  id="floating_last_name"
-                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                  placeholder=" "
-                  required
-                />
-                <label
-                  for="floating_last_name"
-                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                >
-                  Descuento
-                </label>
-              </div>
-            </div>
+              
+
+
+
             <div class="grid md:grid-cols-2 md:gap-6">
+
               <div class="relative z-0 w-full mb-6 group">
                 <select className="select select-ghost w-full max-w-xs   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600">
                   <option disabled selected>
@@ -100,7 +136,33 @@ const AddProduct = () => {
                   ))}
                 </select>
               </div>
+
+              <div class="relative z-0 w-full mb-10 group">
+                <textarea
+                  type="description"
+                  name="description"
+                  id="description"
+                  class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=""
+                  required
+                />
+                <label
+                  for="description"
+                  class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                >
+                  Descripción
+                </label>
+              </div>
+            </div>
+
+              <div className="text-center">
+                    <div className="avatar">
+                      <div className="w-40 rounded-lg">
+                        <img src={selectedImage || img_generic.src} />
+                      </div>
+                    </div>
               <div class="relative z-0 w-full mb-6 group">
+                    
                 <input
                   type="file"
                   className="file-input w-full max-w-xs"
@@ -108,6 +170,9 @@ const AddProduct = () => {
                     setSelectedImage(URL.createObjectURL(e.target.files[0]))
                   }
                 />
+
+                  
+                  </div>
               </div>
             </div>
 
@@ -117,15 +182,11 @@ const AddProduct = () => {
           </form>
         </div>
         {/* columna derecha */}
-        <div className="text-center">
-          <div className="avatar">
-            <div className="w-72 rounded-xl">
-              <img src={selectedImage || img_generic.src} />
-            </div>
-          </div>
-        </div>
+        
       </div>
-    </div>
+)}
+</div>
+    
   );
 };
 

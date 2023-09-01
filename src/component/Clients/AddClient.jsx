@@ -5,7 +5,7 @@ import { FaUserPlus } from "react-icons/fa";
 import Button from "../Button";
 import { useSearchParams } from "next/navigation";
 
-const ButtonWithModal = () => {
+const AddClient = () => {
   const searchParams = useSearchParams(); // agarro lo que venga en la url y lo convierte en obj
 
   const [isModalOpen, setIsModalOpen] = useState(
@@ -186,4 +186,4 @@ const ButtonWithModal = () => {
   );
 };
 
-export default ButtonWithModal;
+export default AddClient;
