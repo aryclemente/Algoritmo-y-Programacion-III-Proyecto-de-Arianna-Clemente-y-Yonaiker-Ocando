@@ -1,9 +1,7 @@
-import React from 'react';
+import React from "react";
 import clients from "../../data/user.json";
 
 const CustomerStatistics = () => {
-
-    
   return (
     <> 
         <div className="px-6 pt-6 2xl:container">
@@ -53,5 +51,3 @@ const CustomerStatistics = () => {
 };
 
 export default CustomerStatistics;
-
-

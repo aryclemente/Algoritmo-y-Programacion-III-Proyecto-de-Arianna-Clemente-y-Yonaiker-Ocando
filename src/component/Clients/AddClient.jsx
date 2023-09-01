@@ -58,8 +58,11 @@ const AddClient = () => {
       {isModalOpen && (
         // el otro
         <div className="fixed inset-0 flex items-center justify-center z-50 m-auto">
-          <div className="bg-white rounded-lg drop-shadow-xl p-8">
-            <button className="btn btn-circle float-right" onClick={closeModal}>
+          <div className="bg-white dark:bg-base-200 rounded-lg drop-shadow-xl p-8">
+            <button
+              className="btn dark:btn-neutral btn-circle float-right"
+              onClick={closeModal}
+            >
               <GrClose />
             </button>
             <h2 className="text-2xl font-bold mb-6 ">Nuevo Cliente</h2>
