@@ -2,13 +2,15 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import categories from "../../data/category.json";
-import clients from "../../data/user.json";
+import clients from "../../data/clients.json";
 import products from "../../data/product.json";
 import { AiFillPlusCircle } from "react-icons/ai";
 import Link from "next/link";
+
 const AddFactura = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
   const [selectedClient, setSelectedClient] = useState(false);
-  const [selectProduct, setSelectProduct] = useState(false);
+const [selectProduct, setSelectProduct] = useState(false);
 
   const handleClientSearch = (event) => {
     const cedula = event.target.value;
@@ -33,7 +35,7 @@ const AddFactura = () => {
     <div className="px-16 py-10 h-full">
       <div className="text-3xl font-semibold pb-6">Facturar Producto</div>
 
-      {/* toas de mensaje si el usuario no esta registrado */}
+{/* toas de mensaje si el usuario no esta registrado */}
       {selectedClient === undefined && (
         <div className="toast toast-top toast-center">
           <div className="alert alert-info">
@@ -55,9 +57,10 @@ const AddFactura = () => {
         </div>
       )}
       <div className="grid grid-cols-1 gap-10">
+        {/* columna izqueirda */}
         <div className="">
           <form>
-            <div className="pb-4 font-bold underline text-xl">
+<div className="pb-4 font-bold underline text-xl">
               Datos del Cliente
             </div>
             <div className="grid md:grid-cols-3 md:gap-6">
@@ -116,7 +119,7 @@ const AddFactura = () => {
                 </label>
               </div>
               <div class="relative z-0 w-full mb-4 group">
-                <input
+                  <input
                   type="text"
                   name="floating_first_name"
                   id="floating_first_name"
@@ -131,7 +134,7 @@ const AddFactura = () => {
                 >
                   Apellido
                 </label>
-              </div>
+                  </div>
               <div class="relative z-0 w-full mb-4 group">
                 <input
                   type="text"
@@ -150,7 +153,7 @@ const AddFactura = () => {
                 </label>
               </div>
               <div class="relative z-0 w-full mb-4 group">
-                <input
+                  <input
                   type="mail"
                   name="floating_first_name"
                   id="floating_first_name"
@@ -167,7 +170,7 @@ const AddFactura = () => {
                 </label>
               </div>
               <div class="relative z-0 w-full mb-4 group">
-                <input
+                  <input
                   type="text"
                   name="floating_first_name"
                   id="floating_first_name"
@@ -209,7 +212,7 @@ const AddFactura = () => {
                     </select>
                   </div>
                 </div>
-                <div class="relative z-0 w-full mb-4 group">
+              <div class="relative z-0 w-full mb-4 group">
                   <input
                     type="text"
                     name="floating_first_name"

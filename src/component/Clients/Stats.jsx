@@ -1,5 +1,5 @@
 import React from "react";
-import clients from "../../data/user.json";
+import clients from "../../data/clients.json";
 
 const CustomerStatistics = () => {
   return (

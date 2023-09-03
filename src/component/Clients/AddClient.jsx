@@ -47,12 +47,12 @@ const AddClient = () => {
 
   return (
     <div>
-      <div className=" flex items-center p-8">
+      <div className=" flex-row items-center p-8">
         <button
-          className=" drop-shadow-md bg-gradient-to-r from-sky-600 to-cyan-400 text-white font-bold px-5 py-4 rounded-full"
+          className="flex drop-shadow-md bg-gradient-to-r from-sky-600 to-cyan-400 text-white font-bold px-5 py-4 rounded-full"
           onClick={openModal}
         >
-          <FaUserPlus className="mr-2" /> Nuevo Cliente
+          <FaUserPlus className=" mr-2" /> Nuevo Cliente
         </button>
       </div>
       {isModalOpen && (

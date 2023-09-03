@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import clients from "../../data/user.json";
+import clients from "../../data/clients.json";
+import { BiSolidFilePdf } from "react-icons/bi";
+import { TbListDetails } from "react-icons/tb";
 
 /* use client */
 const list = () => {
@@ -74,10 +76,23 @@ const list = () => {
                   <td>{clients.last_name}</td>
                   <td>{clients.ci}</td>
                   <th>
-                    <label htmlFor="my-modal" className="btn">
-                      Detalles
+                  <div className="d-flex flex-row gap-4">
+                    <label
+                      htmlFor="my-modal"
+                      className="btn p-2 text-3xl"
+                      onClick={() => setCurrentProduct(product)}
+                    >
+                      <BiSolidFilePdf />
                     </label>
-                  </th>
+                    <label
+                      htmlFor="my-modal"
+                      className="btn p-2 text-3xl"
+                      onClick={() => setCurrentProduct(product)}
+                    >
+                      <TbListDetails />
+                    </label>
+                  </div>
+                </th>
                 </tr>
               ))}
             </tbody>

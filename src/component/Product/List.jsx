@@ -1,7 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import products from "../../data/product.json";
-import { AiFillPlusCircle } from "react-icons/ai";
+import { BiSolidFilePdf } from "react-icons/bi";
+import { TbListDetails } from "react-icons/tb";
+
 const List = () => {
   const [currentProduct, setCurrentProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -95,18 +97,22 @@ const List = () => {
                 <td>{product.price}</td>
                 <td>{product.category}</td>
                 <th>
-                  <label
-                    htmlFor="my-modal"
-                    className="btn"
-                    onClick={() =>
-                      setCurrentProduct({
-                        ...product,
-                        image: "https://picsum.photos/200/30" + i,
-                      })
-                    }
-                  >
-                    Detalles
-                  </label>
+                  <div className="d-flex flex-row gap-4">
+                    <label
+                      htmlFor="my-modal"
+                      className="btn p-2 text-3xl"
+                      onClick={() => setCurrentProduct(product)}
+                    >
+                      <BiSolidFilePdf />
+                    </label>
+                    <label
+                      htmlFor="my-modal"
+                      className="btn p-2 text-3xl"
+                      onClick={() => setCurrentProduct(product)}
+                    >
+                      <TbListDetails />
+                    </label>
+                  </div>
                 </th>
               </tr>
             ))}
