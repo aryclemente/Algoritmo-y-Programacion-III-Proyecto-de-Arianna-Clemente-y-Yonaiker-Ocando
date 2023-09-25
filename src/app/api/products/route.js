@@ -1,11 +1,11 @@
-// import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-// import { cookies } from "next/headers";
-// import { NextResponse } from "next/server";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { NextResponse } from "next/server";
 
-// export const GET = async (req, res) => {
-//   const supabase = createServerComponentClient({ cookies });
+export const GET = async (req, res) => {
+  const supabase = createServerComponentClient({ cookies });
 
-//   const data = await supabase.from("Document").select();
+  const data = await supabase.from("Document").select();
 
-//   return NextResponse.json(data);
-// };
+  return NextResponse.json(data);
+};
