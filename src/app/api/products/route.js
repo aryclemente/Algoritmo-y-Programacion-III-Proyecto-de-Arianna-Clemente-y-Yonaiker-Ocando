@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 export const GET = async (req, res) => {
   const supabase = createServerComponentClient({ cookies });
 
-  const data = await supabase.from("Document").select();
+  const data = await supabase.from("Product").select();
 
   return NextResponse.json(data);
 };
