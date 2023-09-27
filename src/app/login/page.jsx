@@ -3,12 +3,18 @@ import React from "react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+
+const errors = {
+  "Invalid login credentials": "Credenciales Invalidas",
+};
 
 const login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
   const supabase = createClientComponentClient();
+  const [loading, setLoading] = useState(false);
 
   const handleSignUp = async () => {
     await supabase.auth.signUp({
@@ -22,11 +28,18 @@ const login = () => {
   };
 
   const handleSignIn = async () => {
-    await supabase.auth.signInWithPassword({
+    setLoading(true);
+
+    const res = await supabase.auth.signInWithPassword({
       email,
       password,
     });
     router.refresh();
+    if (res.error) {
+      console.error("Error de autenticación:", res.error);
+      toast.error(errors[res.error.message]);
+    }
+    setLoading(false);
   };
 
   const handleSignOut = async () => {
@@ -35,7 +48,10 @@ const login = () => {
   };
 
   return (
-    <div className="relative py-16">
+    <div
+      className="relative py-16"
+      onKeyDown={(e) => e.key == "Enter" && handleSignIn()}
+    >
       <div className="container relative m-auto px-6 text-gray-500 md:px-12 xl:px-40">
         <div className="m-auto space-y-8 md:w-8/12 lg:w-6/12 xl:w-6/12">
           <div className="rounded-3xl border border-gray-100 bg-white dark:bg-gray-800 dark:border-gray-700 shadow-2xl shadow-gray-600/10 backdrop-blur-2xl">
@@ -85,14 +101,16 @@ const login = () => {
                   className="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"
                   onClick={handleSignIn}
                 >
-                  <span className="relative text-base font-semibold text-white dark:text-dark">
-                    Entrar
-                  </span>
+                  {loading ? (
+                    <span className="loading loading-spinner loading-lg"></span>
+                  ) : (
+                    <span className="relative text-base font-semibold text-white dark:text-dark">
+                      Entrar
+                    </span>
+                  )}
                 </button>
 
-                <button onClick={handleSignUp}>Sign up</button>
-                <button onClick={handleSignIn}>Sign in</button>
-                <button onClick={handleSignOut}>Sign out</button>
+                <Toaster />
               </div>
             </div>
           </div>
