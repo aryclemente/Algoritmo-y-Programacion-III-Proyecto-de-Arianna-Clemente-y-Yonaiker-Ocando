@@ -9,8 +9,5 @@ import Stats from "@/component/stats/Stats";
  */
 
 export default function Home() {
-  return (
-    
-    <Stats />
-  );
+  return <Stats />;
 }

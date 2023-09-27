@@ -3,17 +3,25 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaDoorOpen } from "react-icons/fa";
-import router from "@/router/router";
+import { useRouter } from "next/navigation";
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import routes from "@/router/router";
 
 const Aside = () => {
+  const router = useRouter();
+  const supabase = createClientComponentClient();
+
   const pathName = usePathname();
 
-  const singUp = () => {
-    confirm("Desea Cerrar Sesion?");
-    if (confirm) {
-      console.log("cerraste sesion");
-    } else {
-      console.log("no   cerrar sesion");
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    router.refresh();
+  };
+
+  const signOut = () => {
+    const confirmed = confirm("Desea Cerrar Sesion?");
+    if (confirmed) {
+      handleSignOut();
     }
   };
   return (
@@ -32,7 +40,7 @@ const Aside = () => {
         </div>
 
         <ul className="mt-8 space-y-5 tracking-wide">
-          {router.map((route) => {
+          {routes.map((route) => {
             const isActive = route.path === pathName;
 
             return (
@@ -59,7 +67,7 @@ const Aside = () => {
       <div className="-mx-6 flex items-center justify-between border-t px-6 pt-4 dark:border-gray-700">
         <button
           className="group flex items-center space-x-4 rounded-md px-4 py-3 text-gray-600 dark:text-gray-300"
-          onClick={singUp}
+          onClick={signOut}
         >
           <FaDoorOpen />
           <span className="group-hover:text-gray-700 dark:group-hover:text-white">
