@@ -3,7 +3,7 @@ import React from "react";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 const errors = {
   "Invalid login credentials": "Credenciales Invalidas",
@@ -109,8 +109,6 @@ const login = () => {
                     </span>
                   )}
                 </button>
-
-                <Toaster />
               </div>
             </div>
           </div>

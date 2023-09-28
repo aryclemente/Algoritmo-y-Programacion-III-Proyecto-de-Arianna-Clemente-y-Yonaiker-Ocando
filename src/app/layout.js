@@ -10,13 +10,11 @@ import { redirect, usePathname } from "next/navigation";
 import { useSessionContext } from "@supabase/auth-helpers-react";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Sistema de Facturación",
-  description: "",
-};
+import { Toaster } from "react-hot-toast";
 
-//rutas publicass
-// const publicRoutes = ["/login/", "404"];
+const errors = {
+  "Invalid login credentials": "Credenciales Invalidas",
+};
 
 export default function RootLayout({ children }) {
   const authState = useAuthState();
@@ -53,6 +51,7 @@ export default function RootLayout({ children }) {
         {!!user && <Aside />}
         <div className="h-full ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
           {!!user && <MenuHorizontal />}
+          <Toaster />
 
           {children}
         </div>
