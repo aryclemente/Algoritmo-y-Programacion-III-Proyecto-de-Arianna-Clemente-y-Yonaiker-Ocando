@@ -85,7 +85,7 @@ const SearchBar = () => {
                                     </div>
                                 </div>
                             )}
-                         <button onClick={handleBuscarClick}>Buscar</button>
+                        
                         {filteredClients.map((client) => (
                                 <div key={client.id}>
                                 <p>{client.nombre}</p>
