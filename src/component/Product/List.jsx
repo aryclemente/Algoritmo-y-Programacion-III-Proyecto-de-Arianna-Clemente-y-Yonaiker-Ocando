@@ -1,24 +1,57 @@
 "use client";
-import React, { useState } from "react";
-import products from "../../data/product.json";
+import React, { useEffect, useState } from "react";
 import { BiSolidFilePdf } from "react-icons/bi";
 import { TbListDetails } from "react-icons/tb";
+import toast from "react-hot-toast";
+
+// const error = {
+//   "relation \\"public.Producta\\" does not exist": "Credenciales Invalidas",
+// };
 
 const List = () => {
+  const [currentProducts, setCurrentProducts] = useState([]);
   const [currentProduct, setCurrentProduct] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
   const productsPerPage = 15;
 
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const totalPages = Math.ceil(
+    ((currentProducts && currentProducts.length) || 0) / productsPerPage
+  );
 
   // Calcula el índice inicial y final de los productos a mostrar en la página actual
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentNowProducts = products.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
+  const currentNowProducts = currentProducts
+    ? currentProducts.slice(indexOfFirstProduct, indexOfLastProduct)
+    : [];
+
+  //obtener productos reales de DB
+  const getProducts = async () => {
+    try {
+      const res = await fetch("api/products");
+      const product = await res.json();
+      console.log("res", res);
+      console.log("product", product);
+
+      if (res.status !== 200) {
+        throw new Error(
+          `Error al obtener los productos: ${product.error.message}`
+        );
+      }
+
+      setCurrentProducts(product.data);
+    } catch (error) {
+      console.error("Error en la petición Fetch:", error);
+
+      toast.error(`Ocurrió un error: ${error.message}`);
+      setCurrentProducts([]);
+    }
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
 
   // console.log(currencyProduct);
   return (
