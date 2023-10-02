@@ -102,7 +102,7 @@ const List = () => {
               <th className="">ID</th>
               <th className="text-center">Nombre</th>
               <th>Precio</th>
-              <th>Categoría</th>
+              <th>Categorías</th>
               <th>Acción</th>
             </tr>
           </thead>
@@ -128,7 +128,12 @@ const List = () => {
                   </div>
                 </td>
                 <td>{product.price}</td>
-                <td>{product.category}</td>
+
+                <td>
+                  {product.Category.map((c) => (
+                    <div className="">- {c.name}</div>
+                  ))}{" "}
+                </td>
                 <th>
                   <div className="d-flex flex-row gap-4">
                     <label
@@ -156,7 +161,7 @@ const List = () => {
               <th className="">ID</th>
               <th className="text-center">Nombre</th>
               <th>Precio</th>
-              <th>Categoría</th>
+              <th>Categorías</th>
               <th>Acción</th>
             </tr>
           </tfoot>
