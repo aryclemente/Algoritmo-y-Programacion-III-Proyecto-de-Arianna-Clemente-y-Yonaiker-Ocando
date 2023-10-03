@@ -8,7 +8,12 @@ export const GET = async (req, { params }) => {
 
   const supabase = createServerComponentClient({ cookies });
 
-  const { data, error } = await supabase.from("Product").select().eq("id", id);
+  const { data, error } = await supabase
+    .from("Product")
+    .select(
+      `id, strongId, name, price, image, stock, discount, Category(id, name)`
+    )
+    .eq("id", id);
 
   if (!data) {
     return NextResponse.json({ data, error });
