@@ -76,23 +76,23 @@ const list = () => {
                   <td>{clients.last_name}</td>
                   <td>{clients.ci}</td>
                   <th>
-                  <div className="d-flex flex-row gap-4">
-                    <label
-                      htmlFor="my-modal"
-                      className="btn p-2 text-3xl"
-                      onClick={() => setCurrentProduct(product)}
-                    >
-                      <BiSolidFilePdf />
-                    </label>
-                    <label
-                      htmlFor="my-modal"
-                      className="btn p-2 text-3xl"
-                      onClick={() => setCurrentProduct(product)}
-                    >
-                      <TbListDetails />
-                    </label>
-                  </div>
-                </th>
+                    <div className="d-flex flex-row gap-4">
+                      <label
+                        htmlFor="my-modal"
+                        className="btn p-2 text-3xl"
+                        onClick={() => setCurrentProduct(product)}
+                      >
+                        <BiSolidFilePdf />
+                      </label>
+                      <label
+                        htmlFor="my-modal"
+                        className="btn p-2 text-3xl"
+                        onClick={() => setCurrentProduct(product)}
+                      >
+                        <TbListDetails />
+                      </label>
+                    </div>
+                  </th>
                 </tr>
               ))}
             </tbody>
