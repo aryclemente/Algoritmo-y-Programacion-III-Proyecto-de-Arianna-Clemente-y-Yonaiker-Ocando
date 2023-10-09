@@ -1,14 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Button";
-import categories from "../../data/category.json";
 import img_generic from "../../assets/generic/img-generic.png";
 import { useSearchParams } from "next/navigation";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { GrClose } from "react-icons/gr";
 
 const AddProduct = () => {
-  const [currentCategorys, setCurrentCategorys] = useState(null);
+  const [currentCategories, setCurrentCategories] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const searchParams = useSearchParams(); // agarro lo que venga en la url y lo convierte en obj
 
@@ -24,13 +24,38 @@ const AddProduct = () => {
     setIsModalOpen(false); // Cierra el modal estableciendo el estado a false
   };
 
-  const [selectedImage, setSelectedImage] = useState(null);
-
   const classInput = "";
 
-  const click = () => {
+  const SaveProduct = () => {
     console.log("hola mundo");
   };
+
+  const getCategories = async () => {
+    try {
+      const res = await fetch("api/category");
+      const category = await res.json();
+      console.log("res", res);
+      console.log("category", category);
+
+      if (res.status !== 200) {
+        throw new Error(
+          `Error al obtener las categorías: ${category.error.message}`
+        );
+      }
+
+      setCurrentCategories(category.data);
+    } catch (error) {
+      console.error("Error en la petición Fetch:", error);
+
+      toast.error(`Ocurrió un error: ${error.message}`);
+      setCurrentCategories([]);
+    }
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
   return (
     <div>
       <div className=" flex-row items-center p-8">
@@ -73,23 +98,6 @@ const AddProduct = () => {
 
                 <div class="relative z-0 w-full mb-10 group">
                   <input
-                    type="text"
-                    name="marca"
-                    id="marca"
-                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=" "
-                    required
-                  />
-                  <label
-                    for="floating_first_name"
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  >
-                    Marca
-                  </label>
-                </div>
-
-                <div class="relative z-0 w-full mb-10 group">
-                  <input
                     type="number"
                     name="floating_last_name"
                     id="floating_last_name"
@@ -127,27 +135,10 @@ const AddProduct = () => {
                     <option disabled selected>
                       Categoría
                     </option>
-                    {categories.map((category, i) => (
+                    {currentCategories.map((category, i) => (
                       <option>{category.name}</option>
                     ))}
                   </select>
-                </div>
-
-                <div class="relative z-0 w-full mb-10 group">
-                  <textarea
-                    type="description"
-                    name="description"
-                    id="description"
-                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                    placeholder=""
-                    required
-                  />
-                  <label
-                    for="description"
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                  >
-                    Descripción
-                  </label>
                 </div>
               </div>
 
@@ -174,7 +165,7 @@ const AddProduct = () => {
               </div>
 
               <div className="py-8 text-end ">
-                <Button onClick={click}>Agregar</Button>
+                <Button onClick={SaveProduct}>Agregar</Button>
               </div>
             </form>
           </div>

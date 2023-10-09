@@ -8,12 +8,7 @@ export const GET = async (req, { params }) => {
 
   const supabase = createServerComponentClient({ cookies });
 
-  const { data, error } = await supabase
-    .from("Product")
-    .select(
-      `id, strongId, name, price, image, stock, discount, Category(id, name)`
-    )
-    .eq("id", id);
+  const { data, error } = await supabase.from("Clients").select().eq("id", id);
 
   if (!data) {
     return NextResponse.json({ data, error });
@@ -27,7 +22,7 @@ export const DELETE = async (req, { params }) => {
 
   const supabase = createServerComponentClient({ cookies });
 
-  const { data, error } = await supabase.from("Product").delete().eq("id", id);
+  const { data, error } = await supabase.from("Clients").delete().eq("id", id);
 
   if (!data) {
     return NextResponse.json({ data, error });
