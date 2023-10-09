@@ -26,6 +26,3 @@ export const POST = async (req, res) => {
 
   return NextResponse.json({ data, error });
 };
-
-
-name, price, image, stock, discount, caegoria
