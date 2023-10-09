@@ -21,11 +21,10 @@ const ListDocument = () => {
   );
 
   return (
-    <div className="p-8 ">
-      <div className="pb-2">
-        <div className=" text-start  rounded-md bg-slate-800 p-3">
-          <div className="font-bold text-xl pb-4">Busqueda</div>
-          <div className="form-control d-flex flex-row gap-4">
+    <div className="max-w-screen-xl px-4 mx-auto lg:px-12 w-full ">
+      <div className="relative bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
+        <div className="flex flex-col items-center justify-between p-4 space-y-3 md:flex-row md:space-y-0 md:space-x-4">
+          <div className="form-control d-flex flex-row gap-4 p-2">
             <select className="select select-bordered ">
               <option disabled selected>
                 Tipo
@@ -49,11 +48,7 @@ const ListDocument = () => {
               placeholder="Search"
               className="input input-bordered w-44"
             />
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-44"
-            />
+            
           </div>
         </div>
       </div>
@@ -78,7 +73,7 @@ const ListDocument = () => {
         </div>
       </div>
       {/* // */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto p-4">
         <div className="text-center pb-5">
           <div className="join">
             {Array.from({ length: totalPages }, (_, index) => (
