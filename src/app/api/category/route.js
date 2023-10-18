@@ -1,11 +1,25 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
+import { query } from "../../../database/conection";
 import { NextResponse } from "next/server";
 
 export const GET = async (req, res) => {
-  const supabase = createServerComponentClient({ cookies });
+  try {
+    const { rows } = await query('SELECT * FROM "Category"');
 
-  const { data, error } = await supabase.from("Category").select();
+    // console.log("rows", rows);
 
-  return NextResponse.json({ data, error });
+    if (!rows || rows.length === 0) {
+      return NextResponse.json({
+        data: null,
+        error: { message: "Category not found" },
+      });
+    }
+
+    return NextResponse.json({ data: rows, error: null });
+  } catch (error) {
+    console.error("Error executing query:", error);
+    return NextResponse.json({
+      data: null,
+      error: { message: "Internal server error" },
+    });
+  }
 };
