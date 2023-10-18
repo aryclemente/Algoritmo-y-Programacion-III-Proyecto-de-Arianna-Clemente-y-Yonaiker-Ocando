@@ -32,6 +32,29 @@ CREATE TABLE "Clientes" (
   PRIMARY KEY ("id_clientes")
 );
 
+CREATE TABLE "Categoria" ( 
+  "id_categoria" UUID DEFAULT uuid_generate_v4(),
+  "Nombre" varchar,  
+  PRIMARY KEY ("id_categoria")
+  
+);
+
+CREATE TABLE "Productos" ( 
+  "id_producto" UUID DEFAULT uuid_generate_v4(),
+  "nombre" varchar,  
+  "precio" integer,
+  "Stock" integer,  
+  "id_usuario" UUID,
+  "id_categoria" UUID,
+  PRIMARY KEY ("id_producto"),
+  CONSTRAINT "FK_Productos.id_usuario"    FOREIGN KEY ("id_usuario")
+      REFERENCES "Usuarios"("id_usuario"),
+  CONSTRAINT "FK_Productos.id_categoria" FOREIGN KEY ("id_categoria") REFERENCES "Categoria" ("id_categoria")
+);
+
+
+
+
 CREATE TABLE "Factura" ( 
   "id_factura" UUID DEFAULT uuid_generate_v4(),
   "fecha" timestamp,  
@@ -59,26 +82,5 @@ CREATE TABLE "Detalles" (
     FOREIGN KEY ("id_producto")      REFERENCES "Productos"("id_producto")
 );
 
-CREATE TABLE "Productos" ( 
-  "id_producto" UUID DEFAULT uuid_generate_v4(),
-  "nombre" varchar,  
-  "precio" integer,
-  "Stock" integer,  
-  "id_usuario" UUID,
-  "id_categoria" UUID,
-  PRIMARY KEY ("id_producto"),
-  CONSTRAINT "FK_Productos.id_usuario"    FOREIGN KEY ("id_usuario")
-      REFERENCES "Usuarios"("id_usuario"),  
-  CONSTRAINT "FK_Productos.id_producto"
-    FOREIGN KEY ("id_producto")      REFERENCES "Detalles"("id_producto")
-);
 
-
-CREATE TABLE "Categoría" ( 
-  "id_categoria" UUID DEFAULT uuid_generate_v4(),
-  "Nombre" varchar,  
-  PRIMARY KEY ("id_categoria"),
-  CONSTRAINT "FK_Categoria.id_categoria"    FOREIGN KEY ("id_categoria")
-      REFERENCES "Productos"("id_categoria")
-);
 
