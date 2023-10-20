@@ -131,8 +131,10 @@ const List = () => {
 
                 <td>
                   {product.Category.map((c) => (
-                    <div className="">- {c.name}</div>
-                  ))}{" "}
+                    <div className="" key={c.name}>
+                      - {c.name}
+                    </div>
+                  ))}
                 </td>
                 <th>
                   <div className="d-flex flex-row gap-4">

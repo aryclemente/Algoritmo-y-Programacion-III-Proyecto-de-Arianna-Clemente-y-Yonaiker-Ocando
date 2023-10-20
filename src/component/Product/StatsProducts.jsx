@@ -11,15 +11,19 @@ const CustomerStatistics = () => {
       const product = await res.json();
       console.log("productA", product);
 
+      if (product.error) {
+        throw new Error(product.error.message);
+      }
+
       if (!product.data) {
-        toast.error("Ocurrió un error al obtener los productos", error);
+        throw new Error("Ocurrió un error al obtener los productos");
       }
 
       const count = product.data.length;
       setCountProduct(count);
     } catch (error) {
       console.error("Error al obtener los productos:", error);
-      toast.error("Ocurrió un error al obtener los productos", error);
+      toast.error(error.message ?? "Ocurrió un error al obtener los productos");
     }
   };
 
