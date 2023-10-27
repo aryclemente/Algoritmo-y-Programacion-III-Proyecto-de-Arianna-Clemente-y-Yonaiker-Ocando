@@ -9,7 +9,7 @@ export const GET = async (req, res) => {
       'select p.*, json_agg(json_build_object(\'id\', c.id, \'name\', c.name)) as "Category" from "Product" p  left join "product_categories" pc on pc.product_id = p.id left join "Category" c on pc.category_id = c.id group by p.id'
     );
 
-    console.log("rows", rows);
+    // console.log("rows", rows);
 
     if (!rows || rows.length === 0) {
       return NextResponse.json({
