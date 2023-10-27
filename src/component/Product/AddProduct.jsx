@@ -24,8 +24,6 @@ const AddProduct = () => {
     setIsModalOpen(false); // Cierra el modal estableciendo el estado a false
   };
 
-  const classInput = "";
-
   const SaveProduct = () => {
     console.log("hola mundo");
   };
@@ -34,7 +32,7 @@ const AddProduct = () => {
     try {
       const res = await fetch("api/category");
       const category = await res.json();
-      console.log("res", res);
+      // console.log("res", res);
       console.log("category", category);
 
       if (res.status !== 200) {
@@ -78,8 +76,8 @@ const AddProduct = () => {
             </button>
             <h2 className="text-2xl font-bold mb-6 ">Nuevo Producto</h2>
             <form>
-              <div class="grid md:grid-cols-3 md:gap-10">
-                <div class="relative z-0 w-full mb-10 group">
+              <div className="grid md:grid-cols-3 md:gap-10">
+                <div className="relative z-0 w-full mb-10 group">
                   <input
                     type="text"
                     name="name"
@@ -89,54 +87,54 @@ const AddProduct = () => {
                     required
                   />
                   <label
-                    for="floating_first_name"
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    htmlFor="floating_first_name"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Nombre
                   </label>
                 </div>
 
-                <div class="relative z-0 w-full mb-10 group">
+                <div className="relative z-0 w-full mb-10 group">
                   <input
                     type="number"
                     name="floating_last_name"
                     id="floating_last_name"
-                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required
                   />
                   <label
-                    for="floating_last_name"
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    htmlFor="floating_last_name"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Precio
                   </label>
                 </div>
 
-                <div class="relative z-0 w-full mb-10 group">
+                <div className="relative z-0 w-full mb-10 group">
                   <input
                     type="number"
                     name="floating_last_name"
                     id="floating_last_name"
-                    class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                     placeholder=" "
                     required
                   />
                   <label
-                    for="floating_last_name"
-                    class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                    htmlFor="floating_last_name"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                   >
                     Cantidad
                   </label>
                 </div>
 
-                <div class="relative z-0 w-full mb-6 group">
+                <div className="relative z-0 w-full mb-6 group">
                   <select className="select select-ghost w-full max-w-xs   appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600">
                     <option disabled selected>
                       Categoría
                     </option>
                     {currentCategories.map((category, i) => (
-                      <option>{category.name}</option>
+                      <option>{category.Name}</option>
                     ))}
                   </select>
                 </div>
@@ -152,7 +150,7 @@ const AddProduct = () => {
                       />
                     </div>
                   </div>
-                  <div class="relative z-0 w-full  group">
+                  <div className="relative z-0 w-full  group">
                     <input
                       type="file"
                       className="file-input w-full max-w-xs text-sm"
