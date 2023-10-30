@@ -6,27 +6,26 @@ import { cookies } from "next/headers";
 export const GET = async (req, res) => {
   try {
     //version supabase
-    const supabase = createServerComponentClient({ cookies });
-    const data = await supabase
-      .from("Product")
-      .select("id_product, Name, Price, Stock, Category ( id_category, Name )");
+    // const supabase = createServerComponentClient({ cookies });
+    // const data = await supabase
+    //   .from("Product")
+    //   .select("id_product, Name, Price, Stock, Category ( id_category, Name )");
+
+    // return NextResponse.json(data);
 
     // version con pg
-    // const { rows } = await query(
-    //   'select p.*, json_agg(json_build_object(\'id\', c.id, \'name\', c.name)) as "Category" from "Product" p  left join "product_categories" pc on pc.product_id = p.id left join "Category" c on pc.category_id = c.id group by p.id'
-    // );
+    const { rows } = await query(
+      'select p.*, json_agg(json_build_object(\'id\', c.id, \'Name\', c.Name)) as "Category" from "Product" p  left join "product_categories" pc on pc.product_id = p.id left join "Category" c on pc.category_id = c.id group by p.id'
+    );
 
-    // if (!rows || rows.length === 0) {
-    //   return NextResponse.json({
-    //     data: null,
-    //     error: { message: "Product not found" },
-    //   });
-    // }
+    if (!rows || rows.length === 0) {
+      return NextResponse.json({
+        data: null,
+        error: { message: "Product not found" },
+      });
+    }
 
-    return NextResponse.json(data);
-
-    // version con pg
-    //return NextResponse.json({ data: rows, error: null });
+    return NextResponse.json({ data: rows, error: null });
   } catch (error) {
     console.error("Error executing query:", error);
     return NextResponse.json({
