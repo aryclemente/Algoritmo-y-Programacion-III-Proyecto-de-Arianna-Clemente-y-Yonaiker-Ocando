@@ -31,7 +31,7 @@ const List = () => {
     try {
       const res = await fetch("api/products");
       const product = await res.json();
-      console.log("res", res);
+      // console.log("res", res);
       console.log("product", product);
 
       if (res.status !== 200) {
@@ -108,9 +108,9 @@ const List = () => {
           </thead>
           <tbody>
             {currentNowProducts.map((product, i) => (
-              <tr key={product.id}>
+              <tr key={product.id_product}>
                 <td>
-                  <div className="">{product.id}</div>
+                  <div className="">{product.id_product}</div>
                 </td>
                 <td>
                   <div className="flex items-center space-x-14">
@@ -123,16 +123,18 @@ const List = () => {
                       </div>
                     </div>
                     <div>
-                      <div className="font-bold">{product.name}</div>
+                      <div className="font-bold">{product.Name}</div>
                     </div>
                   </div>
                 </td>
-                <td>{product.price}</td>
+                <td>{product.Price}</td>
 
                 <td>
                   {product.Category.map((c) => (
-                    <div className="">- {c.name}</div>
-                  ))}{" "}
+                    <div className="" key={c.Name}>
+                      - {c.Name}
+                    </div>
+                  ))}
                 </td>
                 <th>
                   <div className="d-flex flex-row gap-4">
